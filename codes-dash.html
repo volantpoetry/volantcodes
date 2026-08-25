@@ -930,6 +930,7 @@
     let toastTimeout = null;
     let copyToastTimeout = null;
     let authTimeout = null;
+    let isAlreadySignedIn = false;
 
     // ========== GET REDIRECT URL ==========
     function getRedirectUrl() {
@@ -939,6 +940,10 @@
 
     // ========== REDIRECT TO LOGIN ==========
     function redirectToLogin() {
+        // Only redirect if not already signed in
+        if (isAlreadySignedIn) {
+            return;
+        }
         const redirectUrl = getRedirectUrl();
         const loginUrl = `https://volantpoetry.vercel.app/admin/admin-login.html?redirect=${encodeURIComponent(redirectUrl)}`;
         window.location.href = loginUrl;
@@ -1489,6 +1494,7 @@ ${req.message || 'No message provided'}
     window.adminSignOut = async function() {
         try {
             await signOut(auth);
+            isAlreadySignedIn = false;
             redirectToLogin();
         } catch (err) {
             // Silent fail
@@ -1528,10 +1534,13 @@ ${req.message || 'No message provided'}
         signInRequired.style.display = 'none';
 
         if (!user) {
+            // Not signed in - redirect to login
             redirectToLogin();
             return;
         }
 
+        // User is signed in - set flag and proceed
+        isAlreadySignedIn = true;
         currentUserEmail.textContent = user.email || user.uid;
 
         try {
