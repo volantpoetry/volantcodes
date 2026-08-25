@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Volant Codes - Professional Vibe Coder</title>
+  <title>Volant Codes — Professional Vibe Coders</title>
   <meta name="description" content="Volant Codes helps businesses and startups build custom websites and platforms. Professional vibe coding with AI-assisted development. Affordable, fast, and built to grow with you." />
   <meta name="keywords" content="vibe coding, web development, custom websites, business platforms, Volant Codes, web design, development services, Ghana web developer, affordable websites" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Volant Codes - Professional Vibe Coder" />
-  <meta property="og:description" content="I build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you." />
+  <meta property="og:title" content="Volant Codes — Professional Vibe Coders" />
+  <meta property="og:description" content="We build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you." />
   <meta property="og:image" content="https://volantpoetry.vercel.app/images/volant-codes-og.png" />
   <meta property="og:url" content="https://volantcodes.vercel.app" />
   <meta property="og:type" content="website" />
@@ -17,13 +17,13 @@
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Volant Codes - Professional Vibe Coder" />
-  <meta name="twitter:description" content="I build custom websites and platforms for businesses and startups." />
+  <meta name="twitter:title" content="Volant Codes — Professional Vibe Coders" />
+  <meta name="twitter:description" content="We build custom websites and platforms for businesses and startups." />
   <meta name="twitter:image" content="https://volantpoetry.vercel.app/images/volant-codes-og.png" />
   
   <!-- Canonical -->
   <link rel="canonical" href="https://volantcodes.vercel.app" />
-  <link rel="icon" type="image/png" href="https://volantpoetry.vercel.app/images/volant-favicon.png" />
+  <link rel="icon" type="image/png" href="https://volantpoetry.vercel.app/images/volant-codes-favicon.png" />
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   
   <style>
-    /* ===== RESET & BASE ===== */
+/* ===== RESET & BASE ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     html { scroll-behavior: smooth; }
@@ -113,56 +113,60 @@
     
     /* ===== HEADER / NAV ===== */
     header {
-      padding: 14px 0;
-      background: white;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    }
-    
-    .header-inner {
+      z-index: 100;
+      height: 70px;
       display: flex;
+      align-items: center;
+      padding: 0 !important;
+    }
+
+    nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .logo .volant {
-      color: #4b2aad;
-    }
-    
-    .logo .codes {
-      color: #4b2aad;
+      padding: 0 4rem;
+      width: 100%;
+      height: 100%;
+      gap: 1.5rem;
       position: relative;
     }
-    
-    .logo .codes::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: #B8860B;
-      border-radius: 2px;
+
+    /* ===== LOGO ===== */
+    .logo {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.6rem !important;
+      text-decoration: none !important;
+      flex-shrink: 0 !important;
     }
-    
+
+    .logo .logo-text {
+      font-family: 'Playfair Display', serif !important;
+      font-size: 1.6rem !important;
+      font-weight: 700 !important;
+      color: #4b2aad !important;
+    }
+
+    .logo .logo-highlight {
+      color: #ffffff !important;
+      text-shadow: 0 0 2px #4b2aad, 0 0 4px #4b2aad, 0 0 6px #4b2aad !important;
+      font-family: 'Playfair Display', serif !important;
+      font-weight: 700 !important;
+    }
+
     .logo img {
-      width: 34px;
-      height: 34px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       object-fit: cover;
     }
-    
+
     .nav-links {
       display: flex;
       gap: 24px;
@@ -215,11 +219,107 @@
       cursor: pointer;
       background: none;
       border: none;
-      color: #1a1a2e;
+      color: #4b2aad !important;
       padding: 8px;
       touch-action: manipulation;
+      transition: color 0.3s ease;
     }
-    
+
+    .menu-toggle:hover {
+      color: #3a1f8a !important;
+    }
+
+    /* ===== MOBILE NAV ===== */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 1.5rem !important;
+      }
+      .logo .logo-text {
+        font-size: 1.4rem !important;
+      }
+      .logo img {
+        width: 34px !important;
+        height: 34px !important;
+      }
+      .logo {
+        gap: 0.5rem !important;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+        background: white;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid #eee;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      }
+      
+      .nav-links.open {
+        display: flex;
+      }
+      
+      .nav-links a {
+        padding: 10px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid #f5f5f5;
+        width: 100%;
+        color: #4b2aad !important;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-links a:hover {
+        color: #3a1f8a !important;
+        background: #f5f0ff;
+        padding-left: 8px;
+        border-radius: 4px;
+      }
+      
+      .nav-links a::after { display: none; }
+      
+      .nav-links .nav-cta {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 0 0.8rem !important;
+        gap: 0.5rem !important;
+      }
+      .logo .logo-text {
+        font-size: 1.3rem !important;
+      }
+      .logo img {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .logo {
+        gap: 0.4rem !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .logo .logo-text {
+        font-size: 1.15rem !important;
+      }
+      .logo img {
+        width: 26px !important;
+        height: 26px !important;
+      }
+      .logo {
+        gap: 0.35rem !important;
+      }
+    }
+
     /* ===== HERO ===== */
     .hero {
       padding: 60px 0 50px;
@@ -322,7 +422,124 @@
     .code-block .function { color: #dcdcaa; }
     .code-block .variable { color: #9cdcfe; }
     .code-block .gold-text { color: #B8860B; }
-    
+
+    /* ===== RESPONSIVE HERO ===== */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 0 30px;
+        gap: 30px;
+      }
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-content .badge {
+        font-size: 0.7rem;
+        padding: 4px 14px;
+      }
+      .hero-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        flex: 0 1 auto;
+        min-width: 120px;
+        max-width: 200px;
+        justify-content: center;
+        padding: 12px 16px;
+        font-size: 0.85rem;
+        min-height: 44px;
+        white-space: nowrap;
+      }
+      .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .hero-stats .stat h3 {
+        font-size: 1.6rem;
+      }
+      .code-block {
+        font-size: 0.75rem;
+        padding: 22px;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 2.0rem;
+      }
+      .hero-content p {
+        font-size: 0.92rem;
+      }
+      .hero-content .badge {
+        font-size: 0.6rem;
+        padding: 3px 12px;
+      }
+      .hero {
+        padding: 25px 0 20px;
+      }
+      .hero-buttons {
+        gap: 8px;
+      }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        min-width: 100px;
+        max-width: 160px;
+        padding: 10px 12px;
+        font-size: 0.75rem;
+        min-height: 38px;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-content h1 {
+        font-size: 1.7rem;
+      }
+      .hero-content p {
+        font-size: 0.85rem;
+      }
+      .hero-content .badge {
+        font-size: 0.55rem;
+        padding: 2px 10px;
+      }
+      .hero {
+        padding: 20px 0 15px;
+      }
+      .hero-buttons {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        flex: 0 1 auto;
+        min-width: 85px;
+        max-width: 140px;
+        padding: 8px 10px;
+        font-size: 0.7rem;
+        min-height: 34px;
+        white-space: nowrap;
+      }
+    }
+
     /* ===== TRUST BAR ===== */
     .trust-bar {
       padding: 30px 0;
@@ -354,7 +571,7 @@
     
     .trust-bar .logos .logo-item {
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #1a1a2e;
       opacity: 0.5;
       transition: opacity 0.3s;
@@ -362,7 +579,21 @@
     
     .trust-bar .logos .logo-item:hover { opacity: 1; }
     .trust-bar .logos .logo-item i { margin-right: 6px; color: #B8860B; }
-    
+
+    @media (max-width: 768px) {
+      .trust-bar .container {
+        justify-content: center;
+        text-align: center;
+      }
+      .trust-bar .logos {
+        justify-content: center;
+        gap: 16px;
+      }
+      .trust-bar .logos .logo-item {
+        font-size: 0.85rem;
+      }
+    }
+
     /* ===== SECTION HEADERS ===== */
     .section-header {
       text-align: center;
@@ -384,7 +615,7 @@
       color: #666;
       font-size: 1.05rem;
     }
-    
+
     /* ===== SERVICES ===== */
     .services {
       padding: 60px 0;
@@ -440,7 +671,7 @@
     
     .service-card p {
       color: #666;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       line-height: 1.6;
     }
     
@@ -455,7 +686,7 @@
     
     .service-card .learn-more i { transition: transform 0.3s; }
     .service-card .learn-more:hover i { transform: translateX(5px); }
-    
+
     /* ===== HOW IT WORKS ===== */
     .how-it-works {
       padding: 60px 0;
@@ -488,9 +719,18 @@
     
     .step:hover .step-number { transform: scale(1.08); }
     
-    .step h4 { font-size: 1.05rem; margin-bottom: 6px; }
-    .step p { color: #666; font-size: 0.92rem; max-width: 260px; margin: 0 auto; }
+    .step h4 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
     
+    .step p {
+      color: #666;
+      font-size: 0.95rem;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
     /* ===== PORTFOLIO ===== */
     .portfolio {
       padding: 60px 0;
@@ -526,8 +766,14 @@
     }
     
     .portfolio-item .info { padding: 18px 22px 22px; }
-    .portfolio-item .info h4 { font-size: 1.05rem; margin-bottom: 4px; }
-    .portfolio-item .info p { color: #888; font-size: 0.88rem; }
+    .portfolio-item .info h4 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .portfolio-item .info p {
+      color: #888;
+      font-size: 0.92rem;
+    }
     .portfolio-item .info .tag {
       display: inline-block;
       background: #f0edff;
@@ -538,11 +784,114 @@
       font-weight: 600;
       margin-top: 8px;
     }
+
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 60px 0;
+      background: #faf9fe;
+    }
     
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .about-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .about-avatar {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f0edff, #e8e0ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #4b2aad;
+      position: relative;
+    }
+    
+    .about-avatar::after {
+      content: 'Vibe Coders';
+      position: absolute;
+      bottom: -15px;
+      background: #4b2aad;
+      color: white;
+      padding: 4px 20px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    
+    .about-content .section-header {
+      text-align: left;
+      margin: 0 0 20px 0;
+      max-width: 100%;
+    }
+    
+    .about-content p {
+      font-size: 0.95rem !important;
+      color: #555;
+    }
+    
+    .about-content ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    
+    .about-content ul li {
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+    
+    .about-content ul li .icon {
+      color: #4b2aad;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+      }
+      .about-content .section-header {
+        text-align: center !important;
+      }
+      .about-content ul {
+        text-align: left;
+        max-width: 300px;
+        margin: 0 auto 20px;
+      }
+      .about-avatar {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-avatar {
+        width: 150px;
+        height: 150px;
+      }
+      .about-avatar span {
+        font-size: 3rem !important;
+      }
+    }
+
     /* ===== PRICING ===== */
     .pricing {
       padding: 60px 0;
-      background: #faf9fe;
+      background: white;
     }
     
     .pricing-grid {
@@ -553,7 +902,7 @@
     }
     
     .pricing-card {
-      background: white;
+      background: #faf9fe;
       border-radius: 16px;
       padding: 35px 25px;
       text-align: center;
@@ -626,7 +975,7 @@
     .pricing-card .features li {
       padding: 7px 0;
       border-bottom: 1px solid #f5f5f5;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -645,8 +994,8 @@
       width: 100%;
       justify-content: center;
     }
-    
-    /* Add-Ons */
+
+    /* ===== ADD-ONS ===== */
     .addons-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -656,7 +1005,7 @@
     }
     
     .addon-item {
-      background: white;
+      background: #faf9fe;
       padding: 15px 20px;
       border-radius: 12px;
       border: 1px solid #eee;
@@ -681,11 +1030,11 @@
       font-weight: 600;
       margin-top: 4px;
     }
-    
+
     /* ===== TESTIMONIALS ===== */
     .testimonials {
       padding: 60px 0;
-      background: white;
+      background: #faf9fe;
     }
     
     .testimonials-grid {
@@ -695,7 +1044,7 @@
     }
     
     .testimonial-card {
-      background: #faf9fe;
+      background: white;
       border-radius: 16px;
       padding: 25px;
       border: 1px solid #eee;
@@ -740,13 +1089,20 @@
       font-size: 0.9rem;
     }
     
-    .testimonial-card .client .name { font-weight: 600; font-size: 0.92rem; }
-    .testimonial-card .client .role { font-size: 0.78rem; color: #888; }
+    .testimonial-card .client .name {
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
     
+    .testimonial-card .client .role {
+      font-size: 0.78rem;
+      color: #888;
+    }
+
     /* ===== FAQ ===== */
     .faq {
       padding: 60px 0;
-      background: #faf9fe;
+      background: white;
     }
     
     .faq-list {
@@ -755,7 +1111,7 @@
     }
     
     .faq-item {
-      background: white;
+      background: #faf9fe;
       border-radius: 12px;
       margin-bottom: 10px;
       border: 1px solid #eee;
@@ -775,7 +1131,7 @@
       min-height: 54px;
     }
     
-    .faq-item .question:hover { background: #faf9fe; }
+    .faq-item .question:hover { background: #f5f0ff; }
     .faq-item .question i { transition: transform 0.3s; font-size: 0.9rem; }
     .faq-item.active .question i { transform: rotate(180deg); }
     
@@ -788,13 +1144,14 @@
     }
     
     .faq-item.active .answer { display: block; }
-    
+
     /* ===== CTA SECTION ===== */
     .cta-section {
-      padding: 60px 0;
+      padding: 40px 0 20px;
       background: linear-gradient(135deg, #4b2aad, #3a1f8a);
       color: white;
       text-align: center;
+      margin-bottom: 0;
     }
     
     .cta-section h2 {
@@ -825,11 +1182,12 @@
       background: #f0edff;
       transform: translateY(-2px);
     }
-    
+
     /* ===== CONTACT ===== */
     .contact-section {
       padding: 60px 0;
-      background: white;
+      background: #faf9fe;
+      overflow: hidden;
     }
     
     .contact-wrapper {
@@ -837,6 +1195,9 @@
       grid-template-columns: 1fr 1fr;
       gap: 50px;
       align-items: start;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
     }
     
     .contact-info h3 {
@@ -849,7 +1210,11 @@
       color: #4b2aad;
     }
     
-    .contact-info p { color: #666; margin-bottom: 24px; }
+    .contact-info p {
+      color: #666;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
     
     .contact-info .detail {
       display: flex;
@@ -871,17 +1236,31 @@
       flex-shrink: 0;
     }
     
-    .contact-info .detail strong { display: block; font-size: 0.9rem; }
-    .contact-info .detail span { font-size: 0.9rem; color: #666; }
+    .contact-info .detail strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+    
+    .contact-info .detail span {
+      font-size: 0.9rem;
+      color: #666;
+    }
     
     .contact-form {
-      background: #faf9fe;
+      background: white;
       padding: 30px;
       border-radius: 16px;
       border: 1px solid #eee;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
     
-    .contact-form .form-group { margin-bottom: 16px; }
+    .contact-form .form-group {
+      margin-bottom: 16px;
+      width: 100%;
+    }
     
     .contact-form label {
       display: block;
@@ -903,6 +1282,8 @@
       background: white;
       -webkit-appearance: none;
       appearance: none;
+      box-sizing: border-box;
+      max-width: 100%;
     }
     
     .contact-form input:focus,
@@ -921,6 +1302,7 @@
     .contact-form .btn-primary {
       width: 100%;
       justify-content: center;
+      box-sizing: border-box;
     }
     
     .contact-form .form-note {
@@ -931,104 +1313,590 @@
     }
     
     .contact-form .form-note i { margin-right: 4px; }
-    
+
+    /* ===== RESPONSIVE CONTACT ===== */
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      .contact-section {
+        padding: 30px 0 20px !important;
+      }
+      .contact-form {
+        padding: 20px !important;
+      }
+      .contact-info h3 {
+        font-size: 1.6rem !important;
+      }
+      .contact-info p {
+        font-size: 0.95rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-section {
+        padding: 20px 0 15px !important;
+      }
+      .contact-wrapper {
+        gap: 20px !important;
+      }
+      .contact-form {
+        padding: 16px !important;
+        border-radius: 12px !important;
+      }
+      .contact-form .form-group {
+        margin-bottom: 12px !important;
+      }
+      .contact-form label {
+        font-size: 0.85rem !important;
+      }
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        padding: 10px 12px !important;
+        font-size: 0.9rem !important;
+        border-radius: 8px !important;
+      }
+      .contact-form textarea {
+        min-height: 80px !important;
+      }
+      .contact-form .btn-primary {
+        padding: 12px 20px !important;
+        font-size: 0.9rem !important;
+        min-height: 44px !important;
+      }
+      .contact-form .form-note {
+        font-size: 0.75rem !important;
+      }
+      .contact-info h3 {
+        font-size: 1.3rem !important;
+      }
+      .contact-info p {
+        font-size: 0.88rem !important;
+      }
+      .contact-info .detail {
+        gap: 10px !important;
+        margin-bottom: 10px !important;
+      }
+      .contact-info .detail i {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.8rem !important;
+      }
+      .contact-info .detail strong {
+        font-size: 0.85rem !important;
+      }
+      .contact-info .detail span {
+        font-size: 0.82rem !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .contact-section {
+        padding: 15px 0 10px !important;
+      }
+      .contact-form {
+        padding: 12px !important;
+        border-radius: 10px !important;
+      }
+      .contact-form .form-group {
+        margin-bottom: 10px !important;
+      }
+      .contact-form label {
+        font-size: 0.8rem !important;
+        margin-bottom: 3px !important;
+      }
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        padding: 8px 10px !important;
+        font-size: 0.85rem !important;
+        border-radius: 6px !important;
+      }
+      .contact-form textarea {
+        min-height: 60px !important;
+      }
+      .contact-form .btn-primary {
+        padding: 10px 16px !important;
+        font-size: 0.85rem !important;
+        min-height: 38px !important;
+      }
+      .contact-form .form-note {
+        font-size: 0.7rem !important;
+        margin-top: 8px !important;
+      }
+      .contact-info h3 {
+        font-size: 1.1rem !important;
+      }
+    }
+
+    /* ===== RESPONSIVE SECTION HEADERS ===== */
+    @media (max-width: 768px) {
+      .section-header h2 {
+        font-size: 1.8rem !important;
+      }
+      .section-header p {
+        font-size: 0.95rem !important;
+      }
+      .services .section-header h2,
+      .how-it-works .section-header h2,
+      .portfolio .section-header h2,
+      .pricing .section-header h2,
+      .testimonials .section-header h2,
+      .faq .section-header h2 {
+        font-size: 1.8rem !important;
+      }
+      .pricing h3 {
+        font-size: 1.3rem !important;
+      }
+      .cta-section h2 {
+        font-size: 2rem !important;
+      }
+      .cta-section p {
+        font-size: 1rem !important;
+      }
+      .contact-section .section-header h2 {
+        font-size: 1.8rem !important;
+      }
+      .contact-section .section-header p {
+        font-size: 0.95rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-header h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 8px !important;
+      }
+      .section-header p {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
+      }
+      .section-header {
+        margin-bottom: 20px !important;
+      }
+      .services .section-header h2,
+      .how-it-works .section-header h2,
+      .portfolio .section-header h2,
+      .pricing .section-header h2,
+      .testimonials .section-header h2,
+      .faq .section-header h2 {
+        font-size: 1.4rem !important;
+      }
+      .pricing h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 12px !important;
+      }
+      .cta-section h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 8px !important;
+      }
+      .cta-section p {
+        font-size: 0.9rem !important;
+        margin-bottom: 16px !important;
+      }
+      .cta-section {
+        padding: 20px 0 8px !important;
+      }
+      .contact-section .section-header h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 8px !important;
+      }
+      .contact-section .section-header p {
+        font-size: 0.88rem !important;
+        line-height: 1.5 !important;
+      }
+      .contact-section .section-header {
+        margin-bottom: 20px !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .section-header h2 {
+        font-size: 1.2rem !important;
+        margin-bottom: 6px !important;
+      }
+      .section-header p {
+        font-size: 0.82rem !important;
+        line-height: 1.4 !important;
+      }
+      .section-header {
+        margin-bottom: 15px !important;
+      }
+      .services .section-header h2,
+      .how-it-works .section-header h2,
+      .portfolio .section-header h2,
+      .pricing .section-header h2,
+      .testimonials .section-header h2,
+      .faq .section-header h2 {
+        font-size: 1.2rem !important;
+      }
+      .pricing h3 {
+        font-size: 1rem !important;
+        margin-bottom: 10px !important;
+      }
+      .cta-section h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 6px !important;
+      }
+      .cta-section p {
+        font-size: 0.82rem !important;
+        margin-bottom: 12px !important;
+      }
+      .contact-section .section-header h2 {
+        font-size: 1.2rem !important;
+        margin-bottom: 6px !important;
+      }
+      .contact-section .section-header p {
+        font-size: 0.82rem !important;
+        line-height: 1.4 !important;
+      }
+      .contact-section .section-header {
+        margin-bottom: 15px !important;
+      }
+    }
+
+    /* ===== BUTTONS RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .btn-primary,
+      .btn-secondary {
+        font-size: 0.85rem !important;
+        padding: 12px 20px !important;
+        min-height: 44px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn-primary,
+      .btn-secondary {
+        font-size: 0.75rem !important;
+        padding: 10px 16px !important;
+        min-height: 38px !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .btn-primary,
+      .btn-secondary {
+        font-size: 0.7rem !important;
+        padding: 8px 12px !important;
+        min-height: 34px !important;
+      }
+    }
+
     /* ===== FOOTER ===== */
-    footer {
-      padding: 40px 0 20px;
+    #volant-footer {
       background: #1a1a2e;
       color: #aaa;
+      margin-top: 0.2rem;
+      padding: 1.5rem 0 20px;
     }
-    
-    .footer-inner {
+
+    #volant-footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 1.5rem 20px;
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 35px;
-      margin-bottom: 30px;
+      text-align: left !important;
     }
-    
-    .footer-col h4 {
+
+    .volant-footer-col {
+      text-align: left !important;
+    }
+
+    .volant-footer-col h4 {
       color: white;
       margin-bottom: 12px;
       font-size: 0.95rem;
       font-weight: 600;
+      text-align: left !important;
     }
-    
-    .footer-col a {
+
+    .volant-footer-col a {
       display: block;
       color: #aaa;
       margin-bottom: 6px;
       transition: color 0.3s;
       font-size: 0.88rem;
+      text-decoration: none;
+      text-align: left !important;
     }
-    
-    .footer-col a:hover { color: white; }
-    
-    .footer-brand .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    
-    .footer-brand .logo .volant {
+
+    .volant-footer-col a:hover {
       color: white;
     }
-    
-    .footer-brand .logo .codes {
-      color: #B8860B;
+
+    /* Footer Logo */
+    #volant-footer .logo {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.6rem !important;
+      text-decoration: none !important;
+      flex-shrink: 0 !important;
+      margin-bottom: 8px;
+      justify-content: flex-start !important;
     }
-    
-    .footer-brand p {
+
+    #volant-footer .logo .logo-text {
+      font-family: 'Playfair Display', serif !important;
+      font-size: 1.3rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+    }
+
+    #volant-footer .logo .logo-highlight {
+      color: #ffffff !important;
+      text-shadow: 0 0 2px #4b2aad, 0 0 4px #4b2aad, 0 0 6px #4b2aad !important;
+      font-family: 'Playfair Display', serif !important;
+      font-weight: 700 !important;
+    }
+
+    #volant-footer .logo img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .volant-footer-desc {
       font-size: 0.88rem;
       line-height: 1.6;
+      color: #aaa;
       max-width: 320px;
+      text-align: left !important;
     }
-    
-    .footer-socials {
-      display: flex;
-      gap: 10px;
-      margin-top: 12px;
+
+    .volant-footer-social {
+      display: none !important;
     }
-    
-    .footer-socials a {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #2a2a4e;
+
+    .volant-footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left !important;
+    }
+
+    .volant-footer-links li {
+      margin-bottom: 6px;
+      text-align: left !important;
+    }
+
+    .volant-footer-links li a {
+      text-align: left !important;
+      display: inline-block !important;
+      color: #c4b8aa !important;
+      text-decoration: none !important;
+      transition: 0.3s !important;
+      font-size: 0.88rem !important;
+    }
+
+    .volant-footer-links li a:hover {
+      color: #b76e4b !important;
+      padding-left: 5px !important;
+    }
+
+    .volant-footer-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left !important;
+    }
+
+    .volant-footer-contact-list li {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: white;
-      transition: all 0.3s;
+      gap: 8px;
+      color: #aaa;
+      font-size: 0.88rem;
+      padding: 4px 0;
+      line-height: 1.4;
+      text-align: left !important;
+      justify-content: flex-start !important;
+    }
+
+    .volant-footer-contact-list li i {
+      color: #B8860B;
+      width: 18px;
+      text-align: center;
       font-size: 0.9rem;
     }
-    
-    .footer-socials a:hover {
-      background: #4b2aad;
-      transform: translateY(-3px);
+
+    .volant-footer-contact-list li a {
+      color: #aaa !important;
+      text-decoration: none !important;
+      transition: 0.3s ease !important;
     }
-    
-    .footer-bottom {
-      text-align: center;
-      padding-top: 20px;
+
+    .volant-footer-contact-list li a:hover {
+      color: white !important;
+    }
+
+    #volant-footer-bottom {
       border-top: 1px solid #333;
-    }
-    
-    .footer-bottom p {
+      padding: 20px 20px;
+      text-align: center;
       font-size: 0.82rem;
       color: #888;
-      margin: 0;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    
-    .footer-bottom a {
+
+    #volant-footer-bottom a {
       color: #aaa;
+      text-decoration: none;
       transition: color 0.3s;
     }
-    
-    .footer-bottom a:hover { color: white; }
-    
+
+    #volant-footer-bottom a:hover {
+      color: white;
+    }
+
+    .platform-badge {
+      display: inline-block;
+      background: rgba(184, 134, 11, 0.15);
+      padding: 2px 14px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      color: #B8860B;
+      font-weight: 500;
+    }
+
+    /* ===== RESPONSIVE FOOTER ===== */
+    @media (max-width: 768px) {
+      #volant-footer {
+        margin-top: 0.15rem;
+        padding-top: 1.2rem;
+      }
+      #volant-footer-container {
+        padding: 0 1.5rem 1rem 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        text-align: left !important;
+      }
+      .volant-footer-brand {
+        grid-column: 1 / -1;
+        text-align: left !important;
+        margin-bottom: 0.2rem;
+      }
+      #volant-footer .logo {
+        justify-content: flex-start !important;
+      }
+      #volant-footer .logo .logo-text {
+        font-size: 1.2rem !important;
+      }
+      #volant-footer .logo img {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .volant-footer-desc {
+        max-width: 100%;
+        text-align: left !important;
+        font-size: 0.8rem;
+      }
+      .volant-footer-col {
+        text-align: left !important;
+      }
+      .volant-footer-col h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.4rem !important;
+        text-align: left !important;
+      }
+      .volant-footer-links li a {
+        font-size: 0.8rem !important;
+        text-align: left !important;
+      }
+      .volant-footer-contact-list li {
+        justify-content: flex-start !important;
+        font-size: 0.8rem;
+      }
+      #volant-footer-bottom {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #volant-footer {
+        margin-top: 0.1rem;
+        padding-top: 1rem;
+      }
+      #volant-footer-container {
+        padding: 0 1rem 0.8rem 1rem;
+        gap: 0.8rem;
+        grid-template-columns: 1fr 1fr;
+      }
+      #volant-footer .logo .logo-text {
+        font-size: 1.1rem !important;
+      }
+      #volant-footer .logo img {
+        width: 26px !important;
+        height: 26px !important;
+      }
+      #volant-footer .logo {
+        gap: 0.4rem !important;
+      }
+      .volant-footer-desc {
+        font-size: 0.78rem;
+      }
+      .volant-footer-col h4 {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.3rem !important;
+      }
+      .volant-footer-links li a {
+        font-size: 0.75rem !important;
+      }
+      .volant-footer-contact-list li {
+        font-size: 0.75rem;
+      }
+      #volant-footer-bottom {
+        padding: 0.4rem 1rem;
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      #volant-footer {
+        margin-top: 0.05rem;
+        padding-top: 0.8rem;
+      }
+      #volant-footer-container {
+        padding: 0 0.8rem 0.6rem 0.8rem;
+        gap: 0.6rem;
+        grid-template-columns: 1fr 1fr;
+      }
+      #volant-footer .logo .logo-text {
+        font-size: 1.0rem !important;
+      }
+      #volant-footer .logo img {
+        width: 22px !important;
+        height: 22px !important;
+      }
+      #volant-footer .logo {
+        gap: 0.35rem !important;
+      }
+      .volant-footer-desc {
+        font-size: 0.72rem;
+      }
+      .volant-footer-col h4 {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.2rem !important;
+      }
+      .volant-footer-links li a {
+        font-size: 0.7rem !important;
+      }
+      .volant-footer-contact-list li {
+        font-size: 0.7rem;
+      }
+      #volant-footer-bottom {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.65rem;
+      }
+    }
+
     /* ===== SUCCESS MESSAGE ===== */
     .success-message {
       display: none;
@@ -1050,1124 +1918,762 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    
-    /* ============================================================ */
-    /* ===== MOBILE RESPONSIVE ===== */
-    /* ============================================================ */
-    
-    @media (max-width: 992px) {
-      .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-      
-      .footer-inner {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 25px;
-      }
-      
-      .footer-brand {
-        grid-column: 1 / -1;
-      }
-      
-      .footer-brand p {
-        max-width: 100%;
-      }
+
+    /* ===== HIDE ABOUT SECTION ===== */
+    #about {
+      display: none !important;
+    }
+
+    /* ===== REMOVE SPACE IN FRONT OF VOLANT FOUNDRY ON SMALL SCREENS ===== */
+
+@media (max-width: 380px) {
+    #volant-footer-bottom p {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 4px 8px !important;  /* Reduced gap */
+        margin-bottom: 4px !important;
     }
     
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px;
-        background: white;
-        position: absolute;
-        top: 66px;
-        left: 0;
-        right: 0;
-        border-bottom: 1px solid #eee;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-      }
-      
-      .nav-links.open {
-        display: flex;
-      }
-      
-      .nav-links a {
-        padding: 10px 0;
-        font-size: 1rem;
-        border-bottom: 1px solid #f5f5f5;
-        width: 100%;
-      }
-      
-      .nav-links a::after { display: none; }
-      .nav-cta {
-        text-align: center;
-        margin-top: 4px;
-      }
-      
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 35px 0 30px;
-        gap: 30px;
-      }
-      
-      .hero-content p {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .hero-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        width: 100%;
-      }
-      
-      .hero-buttons .btn-primary,
-      .hero-buttons .btn-secondary {
-        flex: 0 1 auto;
-        min-width: 120px;
-        max-width: 200px;
-        justify-content: center;
-        padding: 12px 16px;
-        font-size: 0.85rem;
-        min-height: 44px;
-        white-space: nowrap;
-      }
-      
-      .hero-content h1 {
-        font-size: 2.4rem;
-      }
-      
-      .hero-stats {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      
-      .hero-stats .stat h3 {
-        font-size: 1.6rem;
-      }
-      
-      .code-block {
-        font-size: 0.75rem;
-        padding: 22px;
-        max-width: 100%;
-      }
-      
-      .trust-bar .container {
-        justify-content: center;
-        text-align: center;
-      }
-      
-      .trust-bar .logos {
-        justify-content: center;
-        gap: 16px;
-      }
-      
-      .trust-bar .logos .logo-item {
-        font-size: 0.9rem;
-      }
-      
-      .section-header h2 {
-        font-size: 2rem;
-      }
-      
-      .section-header p {
-        font-size: 0.95rem;
-      }
-      
-      .services,
-      .how-it-works,
-      .portfolio,
-      .pricing,
-      .testimonials,
-      .faq,
-      .contact-section {
-        padding: 40px 0;
-      }
-      
-      .services-grid,
-      .portfolio-grid,
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-      
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        max-width: 380px;
-        margin: 0 auto;
-      }
-      
-      .steps {
-        grid-template-columns: 1fr;
-        max-width: 320px;
-        margin: 0 auto;
-      }
-      
-      .step p {
-        max-width: 100%;
-      }
-      
-      .addons-grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-      
-      .footer-inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-      }
-      
-      .footer-brand {
-        grid-column: 1 / -1;
-        text-align: center;
-      }
-      
-      .footer-brand .logo {
-        justify-content: center;
-      }
-      
-      .footer-socials {
-        justify-content: center;
-      }
-      
-      .footer-col {
-        text-align: center;
-      }
-      
-      .footer-col h4 {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-      }
-      
-      .footer-col a {
-        font-size: 0.85rem;
-        padding: 4px 0;
-      }
-      
-      .cta-section {
-        padding: 40px 0;
-      }
-      
-      .cta-section h2 {
-        font-size: 2rem;
-      }
-      
-      .cta-section p {
-        font-size: 1rem;
-        padding: 0 10px;
-      }
-      
-      .contact-form {
-        padding: 20px;
-      }
+    #volant-footer-bottom p a {
+        font-size: 0.65rem !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 2px !important;
     }
     
-    @media (max-width: 480px) {
-      .container {
-        padding: 0 16px;
-      }
-      
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-      
-      .hero-content p {
-        font-size: 1rem;
-      }
-      
-      .hero-stats .stat h3 {
-        font-size: 1.4rem;
-      }
-      
-      .hero-buttons {
-        gap: 8px;
-      }
-      
-      .hero-buttons .btn-primary,
-      .hero-buttons .btn-secondary {
-        min-width: 100px;
-        max-width: 160px;
-        padding: 10px 12px;
-        font-size: 0.75rem;
-        min-height: 38px;
-        white-space: nowrap;
-      }
-      
-      .section-header h2 {
-        font-size: 1.7rem;
-      }
-      
-      .logo {
-        font-size: 1.2rem;
-      }
-      
-      .logo img {
-        width: 28px;
-        height: 28px;
-      }
-      
-      .code-block {
-        font-size: 0.65rem;
-        padding: 18px;
-      }
-      
-      .pricing-card .price {
-        font-size: 1.8rem;
-      }
-      
-      .addons-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-      
-      .addon-item {
-        padding: 12px 14px;
-      }
-      
-      .addon-item strong {
-        font-size: 0.85rem;
-      }
-      
-      .addon-item .addon-price {
-        font-size: 0.8rem;
-      }
-      
-      .trust-bar .logos .logo-item {
-        font-size: 0.8rem;
-      }
-      
-      .testimonial-card blockquote {
-        font-size: 0.9rem;
-      }
-      
-      .faq-item .question {
-        font-size: 0.9rem;
-        padding: 14px 18px;
-        min-height: 48px;
-      }
-      
-      .faq-item .answer {
-        font-size: 0.88rem;
-        padding: 0 18px 16px;
-      }
-      
-      .contact-info h3 {
-        font-size: 1.5rem;
-      }
-      
-      .pricing-card {
-        padding: 28px 18px;
-      }
-      
-      .service-card {
-        padding: 24px 18px;
-      }
-      
-      .portfolio-item .info {
-        padding: 14px 16px 18px;
-      }
-      
-      .footer-inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        margin-bottom: 20px;
-      }
-      
-      .footer-brand {
-        grid-column: 1 / -1;
-      }
-      
-      .footer-brand .logo {
-        font-size: 1.1rem;
-      }
-      
-      .footer-brand p {
-        font-size: 0.82rem;
-      }
-      
-      .footer-socials a {
-        width: 34px;
-        height: 34px;
-        font-size: 0.8rem;
-      }
-      
-      .footer-col h4 {
-        font-size: 0.85rem;
-        margin-bottom: 8px;
-      }
-      
-      .footer-col a {
-        font-size: 0.8rem;
-        padding: 3px 0;
-        margin-bottom: 4px;
-      }
-      
-      .footer-bottom p {
-        font-size: 0.75rem;
-        line-height: 1.6;
-      }
+    #volant-footer-bottom p a:first-child {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
     }
     
-    @media (max-width: 380px) {
-      .hero-content h1 {
-        font-size: 1.7rem;
-      }
-      
-      .hero-buttons {
-        display: flex;
-        flex-direction: row !important;
-        justify-content: center;
-        gap: 6px;
-        flex-wrap: wrap;
-        width: 100%;
-      }
-      
-      .hero-buttons .btn-primary,
-      .hero-buttons .btn-secondary {
-        flex: 0 1 auto;
-        min-width: 85px;
-        max-width: 140px;
-        padding: 8px 10px;
-        font-size: 0.7rem;
-        min-height: 34px;
-        white-space: nowrap;
-      }
-      
-      .addons-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-      }
-      
-      .addon-item {
-        padding: 10px 12px;
-      }
-      
-      .addon-item strong {
-        font-size: 0.8rem;
-      }
-      
-      .addon-item .addon-price {
-        font-size: 0.75rem;
-      }
-      
-      .logo {
-        font-size: 1rem;
-      }
-      
-      .logo img {
-        width: 24px;
-        height: 24px;
-      }
-      
-      .code-block {
-        font-size: 0.55rem;
-        padding: 14px;
-      }
-      
-      .section-header h2 {
-        font-size: 1.4rem;
-      }
-      
-      .container {
-        padding: 0 12px;
-      }
-      
-      .footer-inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-      
-      .footer-col h4 {
-        font-size: 0.8rem;
-      }
-      
-      .footer-col a {
-        font-size: 0.75rem;
-      }
-      
-      .footer-brand .logo {
-        font-size: 1rem;
-      }
-      
-      .footer-brand p {
-        font-size: 0.78rem;
-      }
-      
-      .footer-socials a {
-        width: 30px;
-        height: 30px;
-        font-size: 0.7rem;
-      }
-      
-      .footer-bottom p {
-        font-size: 0.7rem;
-      }
+    /* Remove any extra space or margin from the container */
+    #volant-footer-bottom {
+        padding: 0.3rem 0.4rem !important;
+        text-align: center !important;
     }
+    
+    /* Fix any extra spacing from flex items */
+    #volant-footer-bottom .platform-badge {
+        padding: 1px 8px !important;
+        font-size: 0.55rem !important;
+    }
+}
+
+
   </style>
 </head>
 <body>
-  
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container header-inner">
-      <a href="/" class="logo">
-        <img src="https://volantpoetry.vercel.app/images/volant-favicon.png" alt="Volant Codes" onerror="this.style.display='none'">
-        <span class="volant">Volant</span> <span class="codes">Codes</span>
-      </a>
-      
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-      </ul>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <nav>
+  <a href="/" class="logo">
+    <img src="https://volantpoetry.vercel.app/images/logokk.png" alt="Volant Codes Logo" />
+    <span class="logo-text">
+        <span class="logo-highlight">Volant</span> Codes
+    </span>
+</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero container">
+  <div class="hero-content">
+    <div class="badge"><i class="fas fa-bolt"></i> Professional Vibe Coders</div>
+    <h1>Vibe Code Your <span class="highlight">Business</span> <br>Into <span class="gold">Reality</span></h1>
+    <p>We are Vibe Coders and AI-Assisted Web Developers. We build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you.</p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn-secondary"><i class="fas fa-eye"></i> View Services</a>
+      <a href="#contact" class="btn-primary"><i class="fas fa-rocket"></i> Hire Us</a>
     </div>
-  </header>
-  
-  <!-- ===== HERO ===== -->
-  <section class="hero container">
-    <div class="hero-content">
-      <div class="badge"><i class="fas fa-bolt"></i> Professional Vibe Coder</div>
-      <h1>Vibe Code Your <span class="highlight">Business</span> <br>Into <span class="gold">Reality</span></h1>
-      <p>I'm a Vibe Coder and AI-Assisted Web Developer. I build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you.</p>
-      <div class="hero-buttons">
-        <a href="#services" class="btn-secondary"><i class="fas fa-eye"></i> View Services</a>
-        <a href="#contact" class="btn-primary"><i class="fas fa-rocket"></i> Hire Me</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><h3>3+</h3><p>Platforms Built</p></div>
-        <div class="stat"><h3>100%</h3><p>Client Satisfaction</p></div>
-        <div class="stat"><h3>2-4</h3><p>Weeks Delivery</p></div>
-      </div>
+    <div class="hero-stats">
+      <div class="stat"><h3>3+</h3><p>Platforms Built</p></div>
+      <div class="stat"><h3>100%</h3><p>Client Satisfaction</p></div>
+      <div class="stat"><h3>2-4</h3><p>Weeks Delivery</p></div>
     </div>
-    <div class="hero-visual">
-      <div class="code-block">
-        <span class="comment">// Volant Codes - Vibe Coding</span><br>
-        <span class="keyword">function</span> <span class="function">buildWebsite</span>(business) {<br>
-        &nbsp;&nbsp;<span class="variable">const</span> design = <span class="string">"custom"</span>;<br>
-        &nbsp;&nbsp;<span class="variable">const</span> speed = <span class="string">"lightning"</span>;<br>
-        &nbsp;&nbsp;<span class="variable">const</span> result = business + design + speed;<br>
-        &nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"🚀 Your dream site is live!"</span>;<br>
-        }<br><br>
-        <span class="gold-text">// Ready to vibe? Let's go! 🔥</span>
-      </div>
+  </div>
+  <div class="hero-visual">
+    <div class="code-block">
+      <span class="comment">// Volant Codes — Vibe Coding Team</span><br>
+      <span class="keyword">function</span> <span class="function">buildWebsite</span>(business) {<br>
+      &nbsp;&nbsp;<span class="variable">const</span> design = <span class="string">"custom"</span>;<br>
+      &nbsp;&nbsp;<span class="variable">const</span> speed = <span class="string">"lightning"</span>;<br>
+      &nbsp;&nbsp;<span class="variable">const</span> result = business + design + speed;<br>
+      &nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"🚀 Your dream site is live!"</span>;<br>
+      }<br><br>
+      <span class="gold-text">// Ready to vibe? Let's go! 🔥</span>
     </div>
-  </section>
-  
-  <!-- ===== TRUST BAR ===== -->
-  <section class="trust-bar">
-    <div class="container">
-      <span>Trusted by businesses building:</span>
-      <div class="logos">
-        <span class="logo-item"><i class="fas fa-store"></i> E-Commerce</span>
-        <span class="logo-item"><i class="fas fa-newspaper"></i> Content</span>
-        <span class="logo-item"><i class="fas fa-handshake"></i> Services</span>
-        <span class="logo-item"><i class="fas fa-users"></i> Communities</span>
-        <span class="logo-item"><i class="fas fa-graduation-cap"></i> Education</span>
-      </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<section class="trust-bar">
+  <div class="container">
+    <span>Trusted by businesses building:</span>
+    <div class="logos">
+      <span class="logo-item"><i class="fas fa-store"></i> E-Commerce</span>
+      <span class="logo-item"><i class="fas fa-newspaper"></i> Content</span>
+      <span class="logo-item"><i class="fas fa-handshake"></i> Services</span>
+      <span class="logo-item"><i class="fas fa-users"></i> Communities</span>
+      <span class="logo-item"><i class="fas fa-graduation-cap"></i> Education</span>
     </div>
-  </section>
-  
-  <!-- ===== SERVICES ===== -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <h2>What I <span class="highlight">Build</span></h2>
-        <p>Everything your business needs to thrive online. From simple landing pages to complex platforms.</p>
-      </div>
-      
-      <div class="services-grid">
-        <div class="service-card">
-          <span class="icon">🌐</span>
-          <h3>Business Websites</h3>
-          <p>Professional, fast, and mobile-friendly websites that convert visitors into customers.</p>
-          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="service-card">
-          <span class="icon">📱</span>
-          <h3>Web Applications</h3>
-          <p>Custom platforms, dashboards, and tools tailored to your specific business needs.</p>
-          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="service-card">
-          <span class="icon">🛒</span>
-          <h3>E-Commerce Stores</h3>
-          <p>Sell products online with beautiful, secure, and easy-to-manage online stores.</p>
-          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="service-card">
-          <span class="icon">✍️</span>
-          <h3>Content Platforms</h3>
-          <p>Blogs, community platforms, and content hubs that engage your audience.</p>
-          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="service-card">
-          <span class="icon">🔧</span>
-          <h3>Maintenance & Support</h3>
-          <p>Keep your site secure, updated, and running smoothly with ongoing support.</p>
-          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="service-card">
-          <span class="icon">📈</span>
-          <h3>SEO Optimization</h3>
-          <p>Get found on Google with clean code and SEO best practices built in.</p>
-          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>What We <span class="highlight">Build</span></h2>
+      <p>Everything your business needs to thrive online. From simple landing pages to complex platforms.</p>
     </div>
-  </section>
-  
-  <!-- ===== HOW IT WORKS ===== -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-header">
-        <h2>How It <span class="highlight">Works</span></h2>
-        <p>Three simple steps to get your dream website or platform built.</p>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="icon">🌐</span>
+        <h3>Business Websites</h3>
+        <p>Professional, fast, and mobile-friendly websites that convert visitors into customers.</p>
+        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h4>🎯 Tell Me Your Vision</h4>
-          <p>Share your business goals, ideas, and what you need. I listen and understand your unique needs.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h4>⚡ I Vibe Code It</h4>
-          <p>I build your website or platform fast, clean, and exactly how you envisioned it.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h4>🚀 Launch & Grow</h4>
-          <p>Your site goes live. I support you as your business grows and evolves.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ===== PORTFOLIO ===== -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <h2>Recent <span class="highlight">Projects</span></h2>
-        <p>Some of the platforms and websites I've built.</p>
+      <div class="service-card">
+        <span class="icon">📱</span>
+        <h3>Web Applications</h3>
+        <p>Custom platforms, dashboards, and tools tailored to your specific business needs.</p>
+        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <div class="preview">📝</div>
-          <div class="info">
-            <h4>Volant Poetry</h4>
-            <p>A full-featured poetry community platform</p>
-            <span class="tag">Content Platform</span>
-            <span class="tag" style="margin-left:4px;">Community</span>
-          </div>
-        </div>
-        
-        <div class="portfolio-item">
-          <div class="preview">📚</div>
-          <div class="info">
-            <h4>Volant Reads</h4>
-            <p>Online bookstore for poetry collections</p>
-            <span class="tag">E-Commerce</span>
-            <span class="tag" style="margin-left:4px;">Store</span>
-          </div>
-        </div>
-        
-        <div class="portfolio-item">
-          <div class="preview">🏛️</div>
-          <div class="info">
-            <h4>Volant Foundry</h4>
-            <p>Parent platform for the Volant ecosystem</p>
-            <span class="tag">Platform</span>
-            <span class="tag" style="margin-left:4px;">Brand</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ===== PRICING ===== -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <h2>Simple <span class="highlight">Pricing</span></h2>
-        <p>Prices in <strong>GHS</strong> for Ghana clients and <strong>USD</strong> for international clients.</p>
+      <div class="service-card">
+        <span class="icon">🛒</span>
+        <h3>E-Commerce Stores</h3>
+        <p>Sell products online with beautiful, secure, and easy-to-manage online stores.</p>
+        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       
-      <div class="pricing-grid">
-        <!-- Basic Website -->
-        <div class="pricing-card popular">
-          <div class="popular-badge">Most Popular</div>
-          <div class="plan-name">Basic Website</div>
-          <div class="price">₵200 <small>GHS</small></div>
-          <span class="currency-toggle">or $50 USD</span>
-          <p class="description">Perfect for getting started online.</p>
-          <ul class="features">
-            <li><i class="fas fa-check"></i> 1-3 page website</li>
-            <li><i class="fas fa-check"></i> Mobile-friendly design</li>
-            <li><i class="fas fa-check"></i> Contact form</li>
-            <li><i class="fas fa-check"></i> Social media links</li>
-            <li><i class="fas fa-check"></i> 1 round of revisions</li>
-            <li><i class="fas fa-check"></i> 1 week support</li>
-            <li><i class="fas fa-check"></i> Delivery in 3-5 days</li>
-          </ul>
-          <a href="#contact" class="btn-primary">Hire Me</a>
-        </div>
-        
-        <!-- Business Website -->
-        <div class="pricing-card">
-          <div class="plan-name">Business Website</div>
-          <div class="price">₵400 <small>GHS</small></div>
-          <span class="currency-toggle">or $100 USD</span>
-          <p class="description">For growing businesses and brands.</p>
-          <ul class="features">
-            <li><i class="fas fa-check"></i> 5-10 page website</li>
-            <li><i class="fas fa-check"></i> Mobile-friendly design</li>
-            <li><i class="fas fa-check"></i> Blog / CMS integration</li>
-            <li><i class="fas fa-check"></i> SEO optimized</li>
-            <li><i class="fas fa-check"></i> Contact form</li>
-            <li><i class="fas fa-check"></i> 2 rounds of revisions</li>
-            <li><i class="fas fa-check"></i> 1 month support</li>
-            <li><i class="fas fa-check"></i> Delivery in 5-7 days</li>
-          </ul>
-          <a href="#contact" class="btn-secondary">Hire Me</a>
-        </div>
-        
-        <!-- Custom Platform -->
-        <div class="pricing-card">
-          <div class="plan-name">Custom Platform</div>
-          <div class="price">₵800+ <small>GHS</small></div>
-          <span class="currency-toggle">or $200+ USD</span>
-          <p class="description">For custom platforms and web applications.</p>
-          <ul class="features">
-            <li><i class="fas fa-check"></i> Custom web application</li>
-            <li><i class="fas fa-check"></i> User accounts & dashboard</li>
-            <li><i class="fas fa-check"></i> Database integration</li>
-            <li><i class="fas fa-check"></i> Custom features</li>
-            <li><i class="fas fa-check"></i> Unlimited revisions</li>
-            <li><i class="fas fa-check"></i> 3 months support</li>
-            <li><i class="fas fa-check"></i> Delivery in 1-3 weeks</li>
-          </ul>
-          <a href="#contact" class="btn-secondary">Contact Me</a>
+      <div class="service-card">
+        <span class="icon">✍️</span>
+        <h3>Content Platforms</h3>
+        <p>Blogs, community platforms, and content hubs that engage your audience.</p>
+        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="service-card">
+        <span class="icon">🔧</span>
+        <h3>Maintenance & Support</h3>
+        <p>Keep your site secure, updated, and running smoothly with ongoing support.</p>
+        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="service-card">
+        <span class="icon">📈</span>
+        <h3>SEO Optimization</h3>
+        <p>Get found on Google with clean code and SEO best practices built in.</p>
+        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <h2>How It <span class="highlight">Works</span></h2>
+      <p>Three simple steps to get your dream website or platform built.</p>
+    </div>
+    
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>🎯 Tell Us Your Vision</h4>
+        <p>Share your business goals, ideas, and what you need. We listen and understand your unique needs.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>⚡ We Vibe Code It</h4>
+        <p>We build your website or platform fast, clean, and exactly how you envisioned it.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>🚀 Launch & Grow</h4>
+        <p>Your site goes live. We support you as your business grows and evolves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <h2>Recent <span class="highlight">Projects</span></h2>
+      <p>Some of the platforms and websites we've built.</p>
+    </div>
+    
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="preview">📝</div>
+        <div class="info">
+          <h4>Volant Poetry</h4>
+          <p>A full-featured poetry community platform</p>
+          <span class="tag">Content Platform</span>
+          <span class="tag" style="margin-left:4px;">Community</span>
         </div>
       </div>
       
-      <!-- Add-Ons -->
-      <div style="margin-top: 50px; text-align: center;">
-        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px;">
-          Optional <span style="color: #4b2aad;">Add-Ons</span>
-        </h3>
-        
-        <div class="addons-grid">
-          <div class="addon-item">
-            <strong><i class="fas fa-sync-alt" style="color: #4b2aad; margin-right: 6px;"></i> Maintenance</strong>
-            <span class="addon-price">₵20/mo or $3/mo</span>
-          </div>
-          <div class="addon-item">
-            <strong><i class="fas fa-file" style="color: #4b2aad; margin-right: 6px;"></i> Extra Page</strong>
-            <span class="addon-price">₵20 or $3</span>
-          </div>
-          <div class="addon-item">
-            <strong><i class="fas fa-edit" style="color: #4b2aad; margin-right: 6px;"></i> Extra Revision</strong>
-            <span class="addon-price">₵10 or $1.50</span>
-          </div>
-          <div class="addon-item">
-            <strong><i class="fas fa-clock" style="color: #4b2aad; margin-right: 6px;"></i> Priority Delivery</strong>
-            <span class="addon-price">₵50 or $7</span>
-          </div>
-          <div class="addon-item">
-            <strong><i class="fas fa-envelope" style="color: #4b2aad; margin-right: 6px;"></i> Email Setup</strong>
-            <span class="addon-price">₵30 or $4</span>
-          </div>
-          <div class="addon-item">
-            <strong><i class="fas fa-server" style="color: #4b2aad; margin-right: 6px;"></i> Hosting Setup</strong>
-            <span class="addon-price">₵50 or $7</span>
-          </div>
+      <div class="portfolio-item">
+        <div class="preview">📚</div>
+        <div class="info">
+          <h4>Volant Reads</h4>
+          <p>Online bookstore for poetry collections</p>
+          <span class="tag">E-Commerce</span>
+          <span class="tag" style="margin-left:4px;">Store</span>
         </div>
-        
-        <p style="margin-top: 20px; font-size: 0.85rem; color: #888;">
-          <i class="fas fa-info-circle" style="color: #4b2aad;"></i>
-          Payment options: One-time, monthly, or 50/50 split available.
+      </div>
+      
+      <div class="portfolio-item">
+        <div class="preview">🏛️</div>
+        <div class="info">
+          <h4>Volant Foundry</h4>
+          <p>Parent platform for the Volant ecosystem</p>
+          <span class="tag">Platform</span>
+          <span class="tag" style="margin-left:4px;">Brand</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-wrapper">
+      <div class="about-image">
+        <div class="about-avatar">
+          <span style="font-size: 4rem;">👨‍💻</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-header">
+          <h2>About <span class="highlight">Us</span></h2>
+        </div>
+        <p style="font-size: 1.05rem; color: #333; margin-bottom: 15px;">
+          We are <strong>Vibe Coders</strong> and <strong>AI-Assisted Web Developers</strong> based in Ghana.
+          We build custom websites and platforms for businesses and startups around the world.
         </p>
+        <p style="color: #555; margin-bottom: 15px;">
+          We use modern tools including AI to deliver faster and more affordable results.
+          From simple landing pages to complex web applications, we bring your vision to life.
+        </p>
+        <p style="color: #555; margin-bottom: 10px; font-weight: 600;">
+          What we've built:
+        </p>
+        <ul>
+          <li>
+            <span class="icon">📝</span>
+            <span><strong>Volant Poetry</strong> — A full poetry community platform</span>
+          </li>
+          <li>
+            <span class="icon">📚</span>
+            <span><strong>Volant Reads</strong> — Online bookstore for poetry collections</span>
+          </li>
+          <li>
+            <span class="icon">🏛️</span>
+            <span><strong>Volant Foundry</strong> — Multi-platform brand ecosystem</span>
+          </li>
+        </ul>
+        <p style="color: #555; margin-bottom: 20px;">
+          We work with businesses and startups who need quality websites without agency prices.
+          Let's build something great together.
+        </p>
+        <a href="#contact" class="btn-primary"><i class="fas fa-rocket"></i> Work With Us</a>
       </div>
     </div>
-  </section>
-  
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <h2>What Clients <span class="highlight">Say</span></h2>
-        <p>Real feedback from real clients.</p>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>Simple <span class="highlight">Pricing</span></h2>
+      <p>Prices in <strong>GHS</strong> for Ghana clients and <strong>USD</strong> for international clients.</p>
+    </div>
+    
+    <div class="pricing-grid">
+      <!-- Basic Website -->
+      <div class="pricing-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-name">Basic Website</div>
+        <div class="price">₵200 <small>GHS</small></div>
+        <span class="currency-toggle">or $50 USD</span>
+        <p class="description">Perfect for getting started online.</p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> 1-3 page website</li>
+          <li><i class="fas fa-check"></i> Mobile-friendly design</li>
+          <li><i class="fas fa-check"></i> Contact form</li>
+          <li><i class="fas fa-check"></i> Social media links</li>
+          <li><i class="fas fa-check"></i> 1 round of revisions</li>
+          <li><i class="fas fa-check"></i> 1 week support</li>
+          <li><i class="fas fa-check"></i> Delivery in 3-5 days</li>
+        </ul>
+        <a href="#contact" class="btn-primary">Hire Us</a>
       </div>
       
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <blockquote>"Volant Codes brought our poetry platform to life. The team understood our vision and delivered beyond expectations. Highly recommended!"</blockquote>
-          <div class="client">
-            <div class="avatar">RB</div>
-            <div><div class="name">Rence Blunt</div><div class="role">Founder, Volant Poetry</div></div>
-          </div>
+      <!-- Business Website -->
+      <div class="pricing-card">
+        <div class="plan-name">Business Website</div>
+        <div class="price">₵400 <small>GHS</small></div>
+        <span class="currency-toggle">or $100 USD</span>
+        <p class="description">For growing businesses and brands.</p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> 5-10 page website</li>
+          <li><i class="fas fa-check"></i> Mobile-friendly design</li>
+          <li><i class="fas fa-check"></i> Blog / CMS integration</li>
+          <li><i class="fas fa-check"></i> SEO optimized</li>
+          <li><i class="fas fa-check"></i> Contact form</li>
+          <li><i class="fas fa-check"></i> 2 rounds of revisions</li>
+          <li><i class="fas fa-check"></i> 1 month support</li>
+          <li><i class="fas fa-check"></i> Delivery in 5-7 days</li>
+        </ul>
+        <a href="#contact" class="btn-secondary">Hire Us</a>
+      </div>
+      
+      <!-- Custom Platform -->
+      <div class="pricing-card">
+        <div class="plan-name">Custom Platform</div>
+        <div class="price">₵800+ <small>GHS</small></div>
+        <span class="currency-toggle">or $200+ USD</span>
+        <p class="description">For custom platforms and web applications.</p>
+        <ul class="features">
+          <li><i class="fas fa-check"></i> Custom web application</li>
+          <li><i class="fas fa-check"></i> User accounts & dashboard</li>
+          <li><i class="fas fa-check"></i> Database integration</li>
+          <li><i class="fas fa-check"></i> Custom features</li>
+          <li><i class="fas fa-check"></i> Unlimited revisions</li>
+          <li><i class="fas fa-check"></i> 3 months support</li>
+          <li><i class="fas fa-check"></i> Delivery in 1-3 weeks</li>
+        </ul>
+        <a href="#contact" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+    
+    <!-- Add-Ons -->
+    <div style="margin-top: 50px; text-align: center;">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px;">
+        Optional <span style="color: #4b2aad;">Add-Ons</span>
+      </h3>
+      
+      <div class="addons-grid">
+        <div class="addon-item">
+          <strong><i class="fas fa-sync-alt" style="color: #4b2aad; margin-right: 6px;"></i> Maintenance</strong>
+          <span class="addon-price">₵20/mo or $3/mo</span>
         </div>
-        
-        <div class="testimonial-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <blockquote>"Fast, professional, and they truly vibe with your ideas. Our custom dashboard is exactly what we needed. Will work with them again."</blockquote>
-          <div class="client">
-            <div class="avatar">KO</div>
-            <div><div class="name">Kwame O.</div><div class="role">Startup Founder</div></div>
-          </div>
+        <div class="addon-item">
+          <strong><i class="fas fa-file" style="color: #4b2aad; margin-right: 6px;"></i> Extra Page</strong>
+          <span class="addon-price">₵20 or $3</span>
         </div>
-        
-        <div class="testimonial-card">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <blockquote>"The bookstore platform they built for us is beautiful and easy to manage. Sales increased within weeks of launch. Amazing work."</blockquote>
-          <div class="client">
-            <div class="avatar">AK</div>
-            <div><div class="name">Ama K.</div><div class="role">Bookstore Owner</div></div>
-          </div>
+        <div class="addon-item">
+          <strong><i class="fas fa-edit" style="color: #4b2aad; margin-right: 6px;"></i> Extra Revision</strong>
+          <span class="addon-price">₵10 or $1.50</span>
+        </div>
+        <div class="addon-item">
+          <strong><i class="fas fa-clock" style="color: #4b2aad; margin-right: 6px;"></i> Priority Delivery</strong>
+          <span class="addon-price">₵50 or $7</span>
+        </div>
+        <div class="addon-item">
+          <strong><i class="fas fa-envelope" style="color: #4b2aad; margin-right: 6px;"></i> Email Setup</strong>
+          <span class="addon-price">₵30 or $4</span>
+        </div>
+        <div class="addon-item">
+          <strong><i class="fas fa-server" style="color: #4b2aad; margin-right: 6px;"></i> Hosting Setup</strong>
+          <span class="addon-price">₵50 or $7</span>
+        </div>
+      </div>
+      
+      <p style="margin-top: 20px; font-size: 0.85rem; color: #888;">
+        <i class="fas fa-info-circle" style="color: #4b2aad;"></i>
+        Payment options: One-time, monthly, or 50/50 split available.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Clients <span class="highlight">Say</span></h2>
+      <p>Real feedback from real clients.</p>
+    </div>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <blockquote>"Volant Codes brought our poetry platform to life. The team understood our vision and delivered beyond expectations. Highly recommended!"</blockquote>
+        <div class="client">
+          <div class="avatar">RB</div>
+          <div><div class="name">Rence Blunt</div><div class="role">Founder, Volant Poetry</div></div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <blockquote>"Fast, professional, and they truly vibe with your ideas. Our custom dashboard is exactly what we needed. Will work with them again."</blockquote>
+        <div class="client">
+          <div class="avatar">KO</div>
+          <div><div class="name">Kwame O.</div><div class="role">Startup Founder</div></div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <blockquote>"The bookstore platform they built for us is beautiful and easy to manage. Sales increased within weeks of launch. Amazing work."</blockquote>
+        <div class="client">
+          <div class="avatar">AK</div>
+          <div><div class="name">Ama K.</div><div class="role">Bookstore Owner</div></div>
         </div>
       </div>
     </div>
-  </section>
-  
-  <!-- ===== FAQ ===== -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <h2>Frequently Asked <span class="highlight">Questions</span></h2>
-        <p>Got questions? I've got answers.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+      <p>Got questions? We've got answers.</p>
+    </div>
+    
+    <div class="faq-list">
+      <div class="faq-item active">
+        <div class="question" onclick="toggleFAQ(this)">
+          <span>What is "vibe coding"?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="answer">Vibe coding is our approach to building websites and platforms with speed, creativity, and AI assistance. We listen to your vision and bring it to life with clean, custom code that works beautifully.</div>
       </div>
       
-      <div class="faq-list">
-        <div class="faq-item active">
-          <div class="question" onclick="toggleFAQ(this)">
-            <span>What is "vibe coding"?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer">Vibe coding is my approach to building websites and platforms with speed, creativity, and AI assistance. I listen to your vision and bring it to life with clean, custom code that works beautifully.</div>
+      <div class="faq-item">
+        <div class="question" onclick="toggleFAQ(this)">
+          <span>How long does a project take?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-        
-        <div class="faq-item">
-          <div class="question" onclick="toggleFAQ(this)">
-            <span>How long does a project take?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer">Basic websites take 3-5 days. Business websites take 5-7 days. Custom platforms take 1-3 weeks depending on features. I'll give you a timeline during consultation.</div>
+        <div class="answer">Basic websites take 3-5 days. Business websites take 5-7 days. Custom platforms take 1-3 weeks depending on features. We'll give you a timeline during consultation.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="question" onclick="toggleFAQ(this)">
+          <span>Do you offer ongoing support?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-        
-        <div class="faq-item">
-          <div class="question" onclick="toggleFAQ(this)">
-            <span>Do you offer ongoing support?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer">Yes! I offer maintenance plans starting at ₵20/month or $3/month to keep your site secure, updated, and running smoothly.</div>
+        <div class="answer">Yes! We offer maintenance plans starting at ₵20/month or $3/month to keep your site secure, updated, and running smoothly.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="question" onclick="toggleFAQ(this)">
+          <span>What platforms do you build on?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-        
-        <div class="faq-item">
-          <div class="question" onclick="toggleFAQ(this)">
-            <span>What platforms do you build on?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer">I build custom websites and platforms from the ground up using clean HTML, CSS, and JavaScript. I also work with Firebase, Node.js, and other modern technologies.</div>
+        <div class="answer">We build custom websites and platforms from the ground up using clean HTML, CSS, and JavaScript. We also work with Firebase, Node.js, and other modern technologies.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="question" onclick="toggleFAQ(this)">
+          <span>What is the process like?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-        
-        <div class="faq-item">
-          <div class="question" onclick="toggleFAQ(this)">
-            <span>What is the process like?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer">I start with a consultation to understand your vision, then I design, build, and launch your site. I involve you at every step to ensure the result matches your vision.</div>
+        <div class="answer">We start with a consultation to understand your vision, then we design, build, and launch your site. We involve you at every step to ensure the result matches your vision.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="question" onclick="toggleFAQ(this)">
+          <span>Do you use AI?</span>
+          <i class="fas fa-chevron-down"></i>
         </div>
-        
-        <div class="faq-item">
-          <div class="question" onclick="toggleFAQ(this)">
-            <span>Do you use AI?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer">Yes! I use AI tools like Cursor, GitHub Copilot, and ChatGPT to build faster and more efficiently. This allows me to deliver quality work at affordable prices.</div>
-        </div>
+        <div class="answer">Yes! We use AI tools like Cursor, GitHub Copilot, and ChatGPT to build faster and more efficiently. This allows us to deliver quality work at affordable prices.</div>
       </div>
     </div>
-  </section>
-  
-  <!-- ===== CONTACT ===== -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2>Let's <span class="highlight">Build</span> Something Great</h2>
-        <p>Ready to vibe code your dream website or platform? Fill out the form and I'll get back to you within 24 hours.</p>
-      </div>
-      
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h3>Get in <span class="highlight">Touch</span></h3>
-          <p>Tell me about your project, your vision, and what you need. I'll respond with ideas and a plan.</p>
-          
-          <div class="detail">
-            <i class="fas fa-envelope"></i>
-            <div><strong>Email</strong><br><span>hello@volantcodes.com</span></div>
-          </div>
-          <div class="detail">
-            <i class="fas fa-clock"></i>
-            <div><strong>Response Time</strong><br><span>Within 24 hours</span></div>
-          </div>
-          <div class="detail">
-            <i class="fas fa-globe"></i>
-            <div><strong>Part of</strong><br><span><a href="https://volantpoetry.vercel.app/volant_foundry/" style="color:#4b2aad;font-weight:600;">Volant Foundry</a></span></div>
-          </div>
-          
-          <div style="margin-top:20px;padding:14px 18px;background:#f0edff;border-radius:12px;">
-            <p style="margin:0;font-size:0.9rem;color:#4b2aad;">
-              <i class="fas fa-check-circle" style="margin-right:8px;"></i>
-              <strong>100% Satisfaction Guaranteed</strong>
-            </p>
-            <p style="margin:4px 0 0 32px;font-size:0.82rem;color:#666;">I build until you're happy. No exceptions.</p>
-          </div>
-          
-          <div style="margin-top:15px;padding:12px 18px;background:#faf9fe;border-radius:12px;border:1px solid #eee;">
-            <p style="margin:0;font-size:0.85rem;color:#555;">
-              <i class="fas fa-rocket" style="color:#4b2aad;margin-right:8px;"></i>
-              <strong>Available for:</strong> Business websites, custom platforms, web applications
-            </p>
-          </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Let's <span class="highlight">Build</span> Something Great</h2>
+      <p>Ready to vibe code your dream website or platform? Fill out the form and we'll get back to you within 24 hours.</p>
+    </div>
+    
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Get in <span class="highlight">Touch</span></h3>
+        <p>Tell us about your project, your vision, and what you need. We'll respond with ideas and a plan.</p>
+        
+        <div class="detail">
+          <i class="fas fa-envelope"></i>
+          <div><strong>Email</strong><br><span>reach.volant@gmail.com</span></div>
+        </div>
+        <div class="detail">
+          <i class="fas fa-clock"></i>
+          <div><strong>Response Time</strong><br><span>Within 24 hours</span></div>
+        </div>
+        <div class="detail">
+          <i class="fas fa-globe"></i>
+          <div><strong>Part of</strong><br><span><a href="https://volantpoetry.vercel.app/volant_foundry/" style="color:#4b2aad;font-weight:600;">Volant Foundry</a></span></div>
         </div>
         
-        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" placeholder="Enter your full name" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" placeholder="Enter your email" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="business">Business/Project Name</label>
-            <input type="text" id="business" placeholder="Your business or project name" />
-          </div>
-          
-          <div class="form-group">
-            <label for="service">What do you need? *</label>
-            <select id="service" required>
-              <option value="">Select a service...</option>
-              <option value="basic">Basic Website (₵200 / $50)</option>
-              <option value="business">Business Website (₵400 / $100)</option>
-              <option value="custom">Custom Platform (₵800+ / $200+)</option>
-              <option value="maintenance">Maintenance Plan (₵20/mo / $3/mo)</option>
-              <option value="other">Other / Not Sure</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="budget">Budget Range</label>
-            <select id="budget">
-              <option value="">Select budget...</option>
-              <option value="200-400">₵200 - ₵400 ($50 - $100)</option>
-              <option value="400-800">₵400 - ₵800 ($100 - $200)</option>
-              <option value="800-1500">₵800 - ₵1,500 ($200 - $400)</option>
-              <option value="1500+">₵1,500+ ($400+)</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="currency">Preferred Currency</label>
-            <select id="currency">
-              <option value="ghs">GHS (Ghana Cedis)</option>
-              <option value="usd">USD (US Dollars)</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Project Description *</label>
-            <textarea id="message" placeholder="Tell me about your project, your vision, and any specific features you need..." required></textarea>
-          </div>
-          
-          <button type="submit" class="btn-primary" id="submitBtn">
-            <i class="fas fa-paper-plane"></i> Send Project Request
-          </button>
-          
-          <div id="successMessage" class="success-message">
-            <i class="fas fa-check-circle"></i> Thank you! I'll get back to you within 24 hours.
-          </div>
-          
-          <p class="form-note">
-            <i class="fas fa-lock"></i> Your information is safe with me.
+        <div style="margin-top:20px;padding:14px 18px;background:#f0edff;border-radius:12px;">
+          <p style="margin:0;font-size:0.9rem;color:#4b2aad;">
+            <i class="fas fa-check-circle" style="margin-right:8px;"></i>
+            <strong>100% Satisfaction Guaranteed</strong>
           </p>
-        </form>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ===== CTA SECTION ===== -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Build <span class="gold">Something</span> Great?</h2>
-      <p>Let's vibe code your dream website or platform. Get started today with a free consultation.</p>
-      <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
-    </div>
-  </section>
-  
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-col footer-brand">
-          <div class="logo">
-            <span class="volant">Volant</span> <span class="codes">Codes</span>
-          </div>
-          <p>Professional Vibe Coder. I build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          </div>
+          <p style="margin:4px 0 0 32px;font-size:0.82rem;color:#666;">We build until you're happy. No exceptions.</p>
         </div>
         
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#faq">FAQ</a>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#contact">Contact</a>
-          <a href="https://volantpoetry.vercel.app/volant_foundry/">Volant Foundry</a>
-          <a href="https://volantpoetry.vercel.app">Volant Poetry</a>
-          <a href="https://volantpoetry.vercel.app/store/">Volant Reads</a>
-        </div>
-        
-        <div class="footer-col footer-legal">
-          <h4>Legal</h4>
-          <a href="https://volantpoetry.vercel.app/shared/terms.html">Terms</a>
-          <a href="https://volantpoetry.vercel.app/shared/privacy.html">Privacy</a>
+        <div style="margin-top:15px;padding:12px 18px;background:#faf9fe;border-radius:12px;border:1px solid #eee;">
+          <p style="margin:0;font-size:0.85rem;color:#555;">
+            <i class="fas fa-rocket" style="color:#4b2aad;margin-right:8px;"></i>
+            <strong>Available for:</strong> Business websites, custom platforms, web applications
+          </p>
         </div>
       </div>
       
-      <div class="footer-bottom">
-        <p>&copy; 2026 Volant Codes. All Rights Reserved. Part of the <a href="https://volantpoetry.vercel.app/volant_foundry/">Volant Foundry</a> Platform.</p>
-      </div>
+      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" placeholder="Enter your full name" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="business">Business/Project Name</label>
+          <input type="text" id="business" placeholder="Your business or project name" />
+        </div>
+        
+        <div class="form-group">
+          <label for="service">What do you need? *</label>
+          <select id="service" required>
+            <option value="">Select a service...</option>
+            <option value="basic">Basic Website (₵200 / $50)</option>
+            <option value="business">Business Website (₵400 / $100)</option>
+            <option value="custom">Custom Platform (₵800+ / $200+)</option>
+            <option value="maintenance">Maintenance Plan (₵20/mo / $3/mo)</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="budget">Budget Range</label>
+          <select id="budget">
+            <option value="">Select budget...</option>
+            <option value="200-400">₵200 - ₵400 ($50 - $100)</option>
+            <option value="400-800">₵400 - ₵800 ($100 - $200)</option>
+            <option value="800-1500">₵800 - ₵1,500 ($200 - $400)</option>
+            <option value="1500+">₵1,500+ ($400+)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="currency">Preferred Currency</label>
+          <select id="currency">
+            <option value="ghs">GHS (Ghana Cedis)</option>
+            <option value="usd">USD (US Dollars)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Project Description *</label>
+          <textarea id="message" placeholder="Tell us about your project, your vision, and any specific features you need..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary" id="submitBtn">
+          <i class="fas fa-paper-plane"></i> Send Project Request
+        </button>
+        
+        <div id="successMessage" class="success-message">
+          <i class="fas fa-check-circle"></i> Thank you! We'll get back to you within 24 hours.
+        </div>
+        
+        <p class="form-note">
+          <i class="fas fa-lock"></i> Your information is safe with us.
+        </p>
+      </form>
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Build <span class="gold">Something</span> Great?</h2>
+    <p>Let's vibe code your dream website or platform. Get started today with a free consultation.</p>
+    <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="volant-footer">
+  <div id="volant-footer-container">
+<div class="volant-footer-col volant-footer-brand">
+    <div class="logo">
+        <img src="https://volantpoetry.vercel.app/images/logokk.png" alt="Volant Codes Logo" />
+        <span class="logo-text">
+            <span class="logo-highlight">Volant</span> Codes
+        </span>
+    </div>
+    <p class="volant-footer-desc">Professional Vibe Coders. We build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you.</p>
+    <div class="volant-footer-social">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</div>
+
+    <div class="volant-footer-col">
+      <h4>Quick Links</h4>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="volant-footer-col">
+      <h4>Company</h4>
+      <a href="#contact">Contact</a>
+      <a href="https://volantpoetry.vercel.app/volant_foundry/">Volant Foundry</a>
+      <a href="https://volantpoetry.vercel.app">Volant Poetry</a>
+      <a href="https://volantpoetry.vercel.app/store/">Volant Reads</a>
+    </div>
+
+    <div class="volant-footer-col">
+      <h4>Legal</h4>
+      <a href="https://volantpoetry.vercel.app/shared/terms.html">Terms</a>
+      <a href="https://volantpoetry.vercel.app/shared/privacy.html">Privacy</a>
+    </div>
+  </div>
+
+  <div id="volant-footer-bottom">
+    <p style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-bottom:6px;">
+      <a href="https://volantpoetry.vercel.app/volant_foundry/index.html" style="color:#B8860B;text-decoration:none;font-size:0.8rem;font-weight:600;">🏛️ Volant Foundry</a>
+      <a href="https://volantpoetry.vercel.app/index.html" style="color:#B8860B;text-decoration:none;font-size:0.8rem;font-weight:600;">📖 Volant Poetry</a>
+      <a href="https://volantpoetry.vercel.app/store/index.html" style="color:#B8860B;text-decoration:none;font-size:0.8rem;font-weight:600;">📚 Volant Reads</a>
+    </p>
+    <p style="margin:4px 0;">
+      <span style="background:rgba(184,134,11,0.12);padding:2px 14px;border-radius:20px;font-size:0.7rem;color:#B8860B;font-weight:500;">Part of the Volant Foundry Platform</span>
+    </p>
+    <p style="margin-top:6px;font-size:0.75rem;color:#6a5f55;">&copy; 2026 <strong style="color:#c4b8aa;">Volant Codes</strong>. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const menuIcon = menuToggle.querySelector('i');
   
-  <!-- ===== JAVASCRIPT ===== -->
-  <script>
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const menuIcon = menuToggle.querySelector('i');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-times');
+  });
+  
+  // Close menu on link click (mobile)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuIcon.classList.add('fa-bars');
+      menuIcon.classList.remove('fa-times');
+    });
+  });
+  
+  // FAQ Toggle
+  function toggleFAQ(element) {
+    const item = element.closest('.faq-item');
+    const isActive = item.classList.contains('active');
     
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-times');
+    document.querySelectorAll('.faq-item').forEach(el => {
+      el.classList.remove('active');
     });
     
-    // Close menu on link click (mobile)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuIcon.classList.add('fa-bars');
-        menuIcon.classList.remove('fa-times');
-      });
-    });
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  }
+  
+  window.toggleFAQ = toggleFAQ;
+  
+  // Form Submission Handler
+  function handleSubmit(event) {
+    event.preventDefault();
     
-    // FAQ Toggle
-    function toggleFAQ(element) {
-      const item = element.closest('.faq-item');
-      const isActive = item.classList.contains('active');
-      
-      document.querySelectorAll('.faq-item').forEach(el => {
-        el.classList.remove('active');
-      });
-      
-      if (!isActive) {
-        item.classList.add('active');
-      }
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const business = document.getElementById('business').value.trim();
+    const service = document.getElementById('service').value;
+    const budget = document.getElementById('budget').value;
+    const currency = document.getElementById('currency').value;
+    const message = document.getElementById('message').value.trim();
+    
+    if (!name || !email || !service || !message) {
+      alert('Please fill in all required fields.');
+      return;
     }
     
-    window.toggleFAQ = toggleFAQ;
+    const subject = `New Project Request from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\nBusiness: ${business || 'Not specified'}\nService: ${service}\nBudget: ${budget || 'Not specified'}\nCurrency: ${currency}\n\nMessage:\n${message}`;
     
-    // Form Submission Handler
-    function handleSubmit(event) {
-      event.preventDefault();
+    const successMsg = document.getElementById('successMessage');
+    successMsg.classList.add('show');
+    
+    document.getElementById('contactForm').reset();
+    
+    window.location.href = `mailto:hello@volantcodes.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    setTimeout(() => {
+      successMsg.classList.remove('show');
+    }, 5000);
+  }
+  
+  window.handleSubmit = handleSubmit;
+  
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
       
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const business = document.getElementById('business').value.trim();
-      const service = document.getElementById('service').value;
-      const budget = document.getElementById('budget').value;
-      const currency = document.getElementById('currency').value;
-      const message = document.getElementById('message').value.trim();
-      
-      if (!name || !email || !service || !message) {
-        alert('Please fill in all required fields.');
-        return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-      
-      const subject = `New Project Request from ${name}`;
-      const body = `Name: ${name}\nEmail: ${email}\nBusiness: ${business || 'Not specified'}\nService: ${service}\nBudget: ${budget || 'Not specified'}\nCurrency: ${currency}\n\nMessage:\n${message}`;
-      
-      const successMsg = document.getElementById('successMessage');
-      successMsg.classList.add('show');
-      
-      document.getElementById('contactForm').reset();
-      
-      window.location.href = `mailto:hello@volantcodes.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      setTimeout(() => {
-        successMsg.classList.remove('show');
-      }, 5000);
-    }
-    
-    window.handleSubmit = handleSubmit;
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href === '#') return;
-        
-        const target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
