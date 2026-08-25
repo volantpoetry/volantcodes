@@ -696,16 +696,43 @@
       padding: 60px 0;
       background: #faf9fe;
     }
-    
+
     .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
       gap: 30px;
       margin-top: 10px;
+      overflow-x: auto;
+      padding: 10px 4px 20px 4px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
     }
-    
-    .step { text-align: center; }
-    
+
+    .steps::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .steps::-webkit-scrollbar-track {
+      background: #ede7df;
+      border-radius: 10px;
+    }
+
+    .steps::-webkit-scrollbar-thumb {
+      background: #4b2aad;
+      border-radius: 10px;
+    }
+
+    .steps::-webkit-scrollbar-thumb:hover {
+      background: #3a1f8a;
+    }
+
+    .step {
+      text-align: center;
+      flex: 0 0 280px;
+      scroll-snap-align: start;
+      padding: 0 8px;
+    }
+
     .step-number {
       background: #4b2aad;
       color: white;
@@ -719,15 +746,18 @@
       font-weight: 700;
       margin: 0 auto 16px;
       transition: transform 0.3s;
+      flex-shrink: 0;
     }
-    
-    .step:hover .step-number { transform: scale(1.08); }
-    
+
+    .step:hover .step-number {
+      transform: scale(1.08);
+    }
+
     .step h4 {
       font-size: 1.05rem;
       margin-bottom: 6px;
     }
-    
+
     .step p {
       color: #666;
       font-size: 0.95rem;
@@ -735,31 +765,75 @@
       margin: 0 auto;
     }
 
+    /* ===== STEPS SCROLL HINT ===== */
+    .steps-scroll-hint {
+      display: none;
+      text-align: center;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: #8a7b6a;
+    }
+
+    .steps-scroll-hint i {
+      color: #4b2aad;
+      margin-right: 6px;
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(8px); }
+    }
+
     /* ===== PORTFOLIO ===== */
     .portfolio {
       padding: 60px 0;
       background: white;
     }
-    
+
     .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      display: flex;
       gap: 24px;
+      overflow-x: auto;
+      padding: 10px 4px 20px 4px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
     }
-    
+
+    .portfolio-grid::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .portfolio-grid::-webkit-scrollbar-track {
+      background: #ede7df;
+      border-radius: 10px;
+    }
+
+    .portfolio-grid::-webkit-scrollbar-thumb {
+      background: #4b2aad;
+      border-radius: 10px;
+    }
+
+    .portfolio-grid::-webkit-scrollbar-thumb:hover {
+      background: #3a1f8a;
+    }
+
     .portfolio-item {
       background: #faf9fe;
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid #eee;
       transition: all 0.3s ease;
+      flex: 0 0 300px;
+      scroll-snap-align: start;
     }
-    
+
     .portfolio-item:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
     }
-    
+
     .portfolio-item .preview {
       height: 160px;
       background: linear-gradient(135deg, #4b2aad15, #B8860B15);
@@ -768,16 +842,21 @@
       justify-content: center;
       font-size: 2.8rem;
     }
-    
-    .portfolio-item .info { padding: 18px 22px 22px; }
+
+    .portfolio-item .info {
+      padding: 18px 22px 22px;
+    }
+
     .portfolio-item .info h4 {
       font-size: 1.05rem;
       margin-bottom: 4px;
     }
+
     .portfolio-item .info p {
       color: #888;
       font-size: 0.92rem;
     }
+
     .portfolio-item .info .tag {
       display: inline-block;
       background: #f0edff;
@@ -787,6 +866,144 @@
       font-size: 0.7rem;
       font-weight: 600;
       margin-top: 8px;
+    }
+
+    /* ===== PORTFOLIO SCROLL HINT ===== */
+    .portfolio-scroll-hint {
+      display: none;
+      text-align: center;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: #8a7b6a;
+    }
+
+    .portfolio-scroll-hint i {
+      color: #4b2aad;
+      margin-right: 6px;
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+
+    /* ===== RESPONSIVE STEPS & PORTFOLIO ===== */
+    @media (max-width: 768px) {
+      .steps {
+        gap: 20px;
+        padding: 10px 4px 20px 4px;
+      }
+      
+      .step {
+        flex: 0 0 240px;
+      }
+      
+      .step p {
+        max-width: 200px;
+      }
+      
+      .steps-scroll-hint {
+        display: block;
+      }
+      
+      .portfolio-grid {
+        gap: 18px;
+        padding: 10px 4px 20px 4px;
+      }
+      
+      .portfolio-item {
+        flex: 0 0 260px;
+      }
+      
+      .portfolio-scroll-hint {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .step {
+        flex: 0 0 200px;
+      }
+      
+      .step h4 {
+        font-size: 0.95rem;
+      }
+      
+      .step p {
+        font-size: 0.85rem;
+        max-width: 180px;
+      }
+      
+      .step-number {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+      
+      .portfolio-item {
+        flex: 0 0 220px;
+      }
+      
+      .portfolio-item .preview {
+        height: 120px;
+        font-size: 2.2rem;
+      }
+      
+      .portfolio-item .info {
+        padding: 14px 16px 18px;
+      }
+      
+      .portfolio-item .info h4 {
+        font-size: 0.95rem;
+      }
+      
+      .portfolio-item .info p {
+        font-size: 0.82rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .step {
+        flex: 0 0 170px;
+        padding: 0 4px;
+      }
+      
+      .step h4 {
+        font-size: 0.85rem;
+      }
+      
+      .step p {
+        font-size: 0.78rem;
+        max-width: 150px;
+      }
+      
+      .step-number {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+      }
+      
+      .portfolio-item {
+        flex: 0 0 180px;
+      }
+      
+      .portfolio-item .preview {
+        height: 100px;
+        font-size: 1.8rem;
+      }
+      
+      .portfolio-item .info {
+        padding: 10px 12px 14px;
+      }
+      
+      .portfolio-item .info h4 {
+        font-size: 0.85rem;
+      }
+      
+      .portfolio-item .info p {
+        font-size: 0.75rem;
+      }
+      
+      .portfolio-item .info .tag {
+        font-size: 0.6rem;
+        padding: 1px 8px;
+      }
     }
 
     /* ===== ABOUT ===== */
@@ -1318,6 +1535,64 @@
     
     .contact-form .form-note i { margin-right: 4px; }
 
+    /* ===== PHONE INPUT STYLES ===== */
+    .contact-form .phone-input-wrapper {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .contact-form .phone-input-wrapper select {
+      flex: 0 0 135px;
+      padding: 11px 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      background: white;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+    }
+
+    .contact-form .phone-input-wrapper select:focus {
+      outline: none;
+      border-color: #4b2aad;
+      box-shadow: 0 0 0 3px rgba(75, 42, 173, 0.08);
+    }
+
+    .contact-form .phone-input-wrapper input {
+      flex: 1;
+      min-width: 150px;
+      padding: 11px 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      background: white;
+    }
+
+    .contact-form .phone-input-wrapper input:focus {
+      outline: none;
+      border-color: #4b2aad;
+      box-shadow: 0 0 0 3px rgba(75, 42, 173, 0.08);
+    }
+
+    .contact-form .phone-hint {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .contact-form .phone-hint i {
+      color: #4b2aad;
+      margin-right: 4px;
+    }
+
     /* ===== RESPONSIVE CONTACT ===== */
     @media (max-width: 768px) {
       .contact-wrapper {
@@ -1393,6 +1668,12 @@
       }
       .contact-info .detail span {
         font-size: 0.82rem !important;
+      }
+      .contact-form .phone-input-wrapper {
+        flex-direction: column;
+      }
+      .contact-form .phone-input-wrapper select {
+        flex: 1;
       }
     }
 
@@ -1928,89 +2209,62 @@
       display: none !important;
     }
 
-    /* ===== KEYBOARD SHORTCUT HINT ===== */
-    .shortcut-hint {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(26, 26, 46, 0.85);
-      color: #a8f0e6;
-      padding: 8px 18px;
-      border-radius: 30px;
-      font-size: 0.75rem;
-      font-family: 'Courier New', monospace;
-      letter-spacing: 0.5px;
-      z-index: 999;
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(168, 240, 230, 0.15);
-      opacity: 0.7;
-      transition: opacity 0.3s;
-      pointer-events: none;
-      user-select: none;
-    }
-    
-    .shortcut-hint:hover {
-      opacity: 1;
-    }
-    
-    .shortcut-hint kbd {
-      background: rgba(255,255,255,0.1);
-      padding: 1px 8px;
-      border-radius: 4px;
-      color: #fff;
-      font-weight: 600;
-      margin: 0 2px;
-    }
-    
-    .shortcut-hint .key-combo {
-      color: #B8860B;
-      font-weight: 700;
-    }
-
-    @media (max-width: 768px) {
-      .shortcut-hint {
-        display: none;
-      }
-    }
-
     /* ===== REMOVE SPACE IN FRONT OF VOLANT FOUNDRY ON SMALL SCREENS ===== */
-
-@media (max-width: 380px) {
-    #volant-footer-bottom p {
+    @media (max-width: 380px) {
+      #volant-footer-bottom p {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
         gap: 4px 8px !important;
         margin-bottom: 4px !important;
-    }
-    
-    #volant-footer-bottom p a {
+      }
+      
+      #volant-footer-bottom p a {
         font-size: 0.65rem !important;
         padding: 0 !important;
         margin: 0 !important;
         display: inline-flex !important;
         align-items: center !important;
         gap: 2px !important;
-    }
-    
-    #volant-footer-bottom p a:first-child {
+      }
+      
+      #volant-footer-bottom p a:first-child {
         padding-left: 0 !important;
         margin-left: 0 !important;
-    }
-    
-    #volant-footer-bottom {
+      }
+      
+      #volant-footer-bottom {
         padding: 0.3rem 0.4rem !important;
         text-align: center !important;
-    }
-    
-    #volant-footer-bottom .platform-badge {
+      }
+      
+      #volant-footer-bottom .platform-badge {
         padding: 1px 8px !important;
         font-size: 0.55rem !important;
+      }
     }
+
+    /* ===== PORTFOLIO ===== */
+.portfolio {
+  padding: 40px 0 30px;  /* Reduced bottom padding from 60px to 30px */
+  background: white;
 }
 
+.portfolio-grid {
+  display: flex;
+  gap: 20px;  /* Reduced from 24px to 20px */
+  overflow-x: auto;
+  padding: 10px 4px 15px 4px;  /* Reduced bottom padding */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
 
+/* ===== PRICING ===== */
+.pricing {
+  padding: 30px 0 60px;  /* Reduced top padding from 60px to 30px */
+  background: white;
+}
   </style>
 </head>
 <body>
@@ -2018,12 +2272,12 @@
 <!-- ===== HEADER ===== -->
 <header>
   <nav>
-  <a href="/" class="logo">
-    <img src="https://volantpoetry.vercel.app/images/logokk.png" alt="Volant Codes Logo" />
-    <span class="logo-text">
+    <a href="/" class="logo">
+      <img src="https://volantpoetry.vercel.app/images/logokk.png" alt="Volant Codes Logo" />
+      <span class="logo-text">
         <span class="logo-highlight">Volant</span> Codes
-    </span>
-</a>
+      </span>
+    </a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
       <i class="fas fa-bars"></i>
@@ -2039,13 +2293,6 @@
     </ul>
   </nav>
 </header>
-
-<!-- ===== KEYBOARD SHORTCUT HINT ===== -->
-<div class="shortcut-hint">
-  <span class="key-combo"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Q</kbd></span> 
-  <span style="color:#aaa; margin:0 6px;">·</span> 
-  <span style="color:#888;">Open Admin Dashboard</span>
-</div>
 
 <!-- ===== HERO ===== -->
 <section class="hero container">
@@ -2170,6 +2417,10 @@
         <p>Your site goes live. We support you as your business grows and evolves.</p>
       </div>
     </div>
+    
+    <div class="steps-scroll-hint">
+      <i class="fas fa-arrow-right"></i> Swipe to see more
+    </div>
   </div>
 </section>
 
@@ -2211,6 +2462,10 @@
           <span class="tag" style="margin-left:4px;">Brand</span>
         </div>
       </div>
+    </div>
+    
+    <div class="portfolio-scroll-hint">
+      <i class="fas fa-arrow-right"></i> Swipe to see more
     </div>
   </div>
 </section>
@@ -2478,57 +2733,57 @@
     </div>
     
     <div class="contact-wrapper">
-   <div class="contact-info">
-  <h3>Get in <span class="highlight">Touch</span></h3>
-  <p>Tell us about your project, your vision, and what you need. We'll respond with ideas and a plan.</p>
-  
-  <div class="detail">
-    <i class="fas fa-envelope"></i>
-    <div>
-      <strong>Email</strong>
-      <span><a href="mailto:reach.volant@gmail.com" style="color:#4b2aad;text-decoration:none;">reach.volant@gmail.com</a></span>
-    </div>
-  </div>
-  
-  <div class="detail">
-    <i class="fas fa-phone"></i>
-    <div>
-      <strong>Phone</strong>
-      <span><a href="tel:+233245691423" style="color:#4b2aad;text-decoration:none;">+233 24 569 1423</a></span>
-    </div>
-  </div>
-  
-  <div class="detail">
-    <i class="fas fa-clock"></i>
-    <div>
-      <strong>Response Time</strong>
-      <span>Within 24 hours</span>
-    </div>
-  </div>
-  
-  <div class="detail">
-    <i class="fas fa-globe"></i>
-    <div>
-      <strong>Part of</strong>
-      <span><a href="https://volantpoetry.vercel.app/volant_foundry/" style="color:#4b2aad;font-weight:600;">Volant Foundry</a></span>
-    </div>
-  </div>
-  
-  <div style="margin-top:20px;padding:14px 18px;background:#f0edff;border-radius:12px;">
-    <p style="margin:0;font-size:0.9rem;color:#4b2aad;">
-      <i class="fas fa-check-circle" style="margin-right:8px;"></i>
-      <strong>100% Satisfaction Guaranteed</strong>
-    </p>
-    <p style="margin:4px 0 0 32px;font-size:0.82rem;color:#666;">We build until you're happy. No exceptions.</p>
-  </div>
-  
-  <div style="margin-top:15px;padding:12px 18px;background:#faf9fe;border-radius:12px;border:1px solid #eee;">
-    <p style="margin:0;font-size:0.85rem;color:#555;">
-      <i class="fas fa-rocket" style="color:#4b2aad;margin-right:8px;"></i>
-      <strong>Available for:</strong> Business websites, custom platforms, web applications
-    </p>
-  </div>
-</div>
+      <div class="contact-info">
+        <h3>Get in <span class="highlight">Touch</span></h3>
+        <p>Tell us about your project, your vision, and what you need. We'll respond with ideas and a plan.</p>
+        
+        <div class="detail">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <span><a href="mailto:reach.volant@gmail.com" style="color:#4b2aad;text-decoration:none;">reach.volant@gmail.com</a></span>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <i class="fas fa-phone"></i>
+          <div>
+            <strong>Phone</strong>
+            <span><a href="tel:+233245691423" style="color:#4b2aad;text-decoration:none;">+233 24 569 1423</a></span>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <i class="fas fa-clock"></i>
+          <div>
+            <strong>Response Time</strong>
+            <span>Within 24 hours</span>
+          </div>
+        </div>
+        
+        <div class="detail">
+          <i class="fas fa-globe"></i>
+          <div>
+            <strong>Part of</strong>
+            <span><a href="https://volantpoetry.vercel.app/volant_foundry/" style="color:#4b2aad;font-weight:600;">Volant Foundry</a></span>
+          </div>
+        </div>
+        
+        <div style="margin-top:20px;padding:14px 18px;background:#f0edff;border-radius:12px;">
+          <p style="margin:0;font-size:0.9rem;color:#4b2aad;">
+            <i class="fas fa-check-circle" style="margin-right:8px;"></i>
+            <strong>100% Satisfaction Guaranteed</strong>
+          </p>
+          <p style="margin:4px 0 0 32px;font-size:0.82rem;color:#666;">We build until you're happy. No exceptions.</p>
+        </div>
+        
+        <div style="margin-top:15px;padding:12px 18px;background:#faf9fe;border-radius:12px;border:1px solid #eee;">
+          <p style="margin:0;font-size:0.85rem;color:#555;">
+            <i class="fas fa-rocket" style="color:#4b2aad;margin-right:8px;"></i>
+            <strong>Available for:</strong> Business websites, custom platforms, web applications
+          </p>
+        </div>
+      </div>
       
       <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
         <div class="form-group">
@@ -2539,6 +2794,47 @@
         <div class="form-group">
           <label for="email">Email Address *</label>
           <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number <span style="color:#888;font-weight:400;font-size:0.8rem;">(with country code)</span></label>
+          <div class="phone-input-wrapper">
+            <select id="countryCode">
+              <option value="+233">🇬🇭 +233 (Ghana)</option>
+              <option value="+1">🇺🇸 +1 (USA/Canada)</option>
+              <option value="+44">🇬🇧 +44 (UK)</option>
+              <option value="+234">🇳🇬 +234 (Nigeria)</option>
+              <option value="+254">🇰🇪 +254 (Kenya)</option>
+              <option value="+27">🇿🇦 +27 (South Africa)</option>
+              <option value="+256">🇺🇬 +256 (Uganda)</option>
+              <option value="+255">🇹🇿 +255 (Tanzania)</option>
+              <option value="+260">🇿🇲 +260 (Zambia)</option>
+              <option value="+263">🇿🇼 +263 (Zimbabwe)</option>
+              <option value="+91">🇮🇳 +91 (India)</option>
+              <option value="+61">🇦🇺 +61 (Australia)</option>
+              <option value="+49">🇩🇪 +49 (Germany)</option>
+              <option value="+33">🇫🇷 +33 (France)</option>
+              <option value="+39">🇮🇹 +39 (Italy)</option>
+              <option value="+34">🇪🇸 +34 (Spain)</option>
+              <option value="+55">🇧🇷 +55 (Brazil)</option>
+              <option value="+86">🇨🇳 +86 (China)</option>
+              <option value="+81">🇯🇵 +81 (Japan)</option>
+              <option value="+82">🇰🇷 +82 (South Korea)</option>
+              <option value="+971">🇦🇪 +971 (UAE)</option>
+              <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+              <option value="+20">🇪🇬 +20 (Egypt)</option>
+              <option value="+212">🇲🇦 +212 (Morocco)</option>
+              <option value="+216">🇹🇳 +216 (Tunisia)</option>
+              <option value="+213">🇩🇿 +213 (Algeria)</option>
+              <option value="+221">🇸🇳 +221 (Senegal)</option>
+              <option value="+225">🇨🇮 +225 (Ivory Coast)</option>
+              <option value="other">🌍 Other</option>
+            </select>
+            <input type="tel" id="phone" placeholder="24 569 1423" />
+          </div>
+          <div class="phone-hint">
+            <i class="fas fa-info-circle"></i> Enter your local number without the country code (e.g., 24 569 1423)
+          </div>
         </div>
         
         <div class="form-group">
@@ -2610,20 +2906,20 @@
 <!-- ===== FOOTER ===== -->
 <footer id="volant-footer">
   <div id="volant-footer-container">
-<div class="volant-footer-col volant-footer-brand">
-    <div class="logo">
+    <div class="volant-footer-col volant-footer-brand">
+      <div class="logo">
         <img src="https://volantpoetry.vercel.app/images/logokk.png" alt="Volant Codes Logo" />
         <span class="logo-text">
-            <span class="logo-highlight">Volant</span> Codes
+          <span class="logo-highlight">Volant</span> Codes
         </span>
-    </div>
-    <p class="volant-footer-desc">Professional Vibe Coders. We build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you.</p>
-    <div class="volant-footer-social">
+      </div>
+      <p class="volant-footer-desc">Professional Vibe Coders. We build custom websites and platforms for businesses and startups. Fast, clean, and built to grow with you.</p>
+      <div class="volant-footer-social">
         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
-</div>
 
     <div class="volant-footer-col">
       <h4>Quick Links</h4>
@@ -2685,27 +2981,8 @@
     if (e.ctrlKey && e.shiftKey && (e.key === 'q' || e.key === 'Q')) {
       e.preventDefault();
       
-      // Get the current origin and construct the dashboard URL
-      const currentOrigin = window.location.origin;
-      const dashboardUrl = `${currentOrigin}/admin/codes-dash.html`;
-      
-      // Check if we're already on the dashboard page
-      if (window.location.pathname.includes('/admin/codes-dash.html')) {
-        return; // Already on dashboard
-      }
-      
       // Open the dashboard in a new tab
-      window.open(dashboardUrl, '_blank');
-      
-      // Optional: Show a small visual feedback
-      const shortcutHint = document.querySelector('.shortcut-hint');
-      if (shortcutHint) {
-        shortcutHint.style.opacity = '1';
-        shortcutHint.style.transition = 'opacity 0.2s';
-        setTimeout(() => {
-          shortcutHint.style.opacity = '0.7';
-        }, 1000);
-      }
+      window.open('https://volantpoetry.vercel.app/admin/codes-dash.html', '_blank');
     }
   });
 
@@ -2750,6 +3027,8 @@
     
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
+    const countryCode = document.getElementById('countryCode').value;
+    const phoneNumber = document.getElementById('phone').value.trim();
     const business = document.getElementById('business').value.trim();
     const service = document.getElementById('service').value;
     const budget = document.getElementById('budget').value;
@@ -2762,6 +3041,20 @@
       return;
     }
     
+    // Validate phone number format (only digits and spaces allowed)
+    if (phoneNumber && !/^[\d\s\-+()]+$/.test(phoneNumber)) {
+      alert('Please enter a valid phone number (digits and spaces only).');
+      return;
+    }
+    
+    // Combine country code and phone number
+    let fullPhone = '';
+    if (phoneNumber) {
+      // Remove spaces from the phone number
+      const cleanPhone = phoneNumber.replace(/\s/g, '');
+      fullPhone = countryCode + cleanPhone;
+    }
+    
     // Disable button and show loading state
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
@@ -2770,13 +3063,15 @@
     const formData = {
       name: name,
       email: email,
+      phone: fullPhone || '',
+      phoneNumber: fullPhone || '',
       business: business || 'Not specified',
       service: service,
       budget: budget || 'Not specified',
       currency: currency,
       message: message,
       submittedAt: firebase.firestore.FieldValue.serverTimestamp(),
-      status: 'new'
+      status: 'pending'
     };
     
     // Save to Firestore collection "volant-codes"
