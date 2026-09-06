@@ -239,12 +239,17 @@
       nav {
         padding: 0 1.5rem !important;
       }
+      header {
+        height: 60px !important;
+      }
       .logo .logo-text {
-        font-size: 1.4rem !important;
+        font-size: 1.1rem !important;
       }
       .logo img {
-        width: 34px !important;
-        height: 34px !important;
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 0 !important;
+        object-fit: contain !important;
       }
       .logo {
         gap: 0.5rem !important;
@@ -260,7 +265,7 @@
         padding: 20px;
         background: white;
         position: absolute;
-        top: 66px;
+        top: 60px;
         left: 0;
         right: 0;
         border-bottom: 1px solid #eee;
@@ -300,25 +305,35 @@
         padding: 0 0.8rem !important;
         gap: 0.5rem !important;
       }
+      header {
+        height: 44px !important;
+      }
       .logo .logo-text {
-        font-size: 1.3rem !important;
+        font-size: 1.1rem !important;
       }
       .logo img {
-        width: 30px !important;
-        height: 30px !important;
+        width: 22px !important;
+        height: 22px !important;
+        border-radius: 0 !important;
+        object-fit: contain !important;
       }
       .logo {
         gap: 0.4rem !important;
+      }
+      .nav-links {
+        top: 44px !important;
       }
     }
 
     @media (max-width: 380px) {
       .logo .logo-text {
-        font-size: 1.15rem !important;
+        font-size: 1.1rem !important;
       }
       .logo img {
-        width: 26px !important;
-        height: 26px !important;
+        width: 22px !important;
+        height: 22px !important;
+        border-radius: 0 !important;
+        object-fit: contain !important;
       }
       .logo {
         gap: 0.35rem !important;
@@ -2491,6 +2506,29 @@
     </div>
     
     <div class="portfolio-grid">
+      <!-- Volant Lyrics -->
+      <div class="portfolio-item" onclick="window.open('https://volantlyrics.vercel.app', '_blank')">
+        <div class="cover-wrapper" style="position:relative; padding-top:140%; background:#f0ebe4; overflow:hidden; border-radius:0; box-shadow:0 4px 12px rgba(0,0,0,0.06); transition:box-shadow 0.3s ease; cursor:pointer;">
+          <img 
+            src="https://volantpoetry.vercel.app/images/lyrics-site.png" 
+            alt="Volant Lyrics - Lyrics Marketplace" 
+            style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; transition:transform 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.03)'"
+            onmouseout="this.style.transform='scale(1)'"
+          />
+          <span style="position:absolute; top:0.6rem; right:0.6rem; background:#4b2aad; color:#fff; padding:0.15rem 0.7rem; border-radius:30px; font-size:0.55rem; font-weight:600; letter-spacing:0.3px; text-transform:uppercase; box-shadow:0 4px 12px rgba(75,42,173,0.3);">Live</span>
+        </div>
+        <div class="book-body" style="padding:0.6rem 0.2rem 0; display:flex; flex-direction:column;">
+          <div class="book-title" style="font-family:'Playfair Display',serif; font-weight:600; font-size:1.2rem; color:#2d2a24; line-height:1.3; margin-bottom:0.05rem;">Volant Lyrics</div>
+          <div class="book-author" style="font-size:0.9rem; color:#6f6252; margin-bottom:0.05rem;">
+            <i class="fas fa-user-edit" style="color:#b76e4b; font-size:0.65rem; margin-right:2px;"></i> Lyrics Marketplace
+          </div>
+          <div class="book-price" style="font-weight:700; font-size:0.90rem; color:#4b2aad; margin-top:0.05rem;">
+            <i class="fas fa-music" style="color:#4b2aad; font-size:0.7rem; margin-right:4px;"></i> Buy &amp; Sell Original Lyrics
+          </div>
+        </div>
+      </div>
+      
       <!-- Kindady's E-tail -->
       <div class="portfolio-item" onclick="window.open('https://kindadyetail.github.io/', '_blank')">
         <div class="cover-wrapper" style="position:relative; padding-top:140%; background:#f0ebe4; overflow:hidden; border-radius:0; box-shadow:0 4px 12px rgba(0,0,0,0.06); transition:box-shadow 0.3s ease; cursor:pointer;">
